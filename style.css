@@ -1,0 +1,12 @@
+/*
+Theme Name: [theme name]
+Theme URI: http://www.curtismchale.ca
+Description: My starting theme (Based off Starkers by Elliot Jay Stocks http://elliotjaystocks.com)
+Version: 1 (WP2.8+)
+Author: Curtis McHale
+Author URI: http://www.curtismchale.ca
+Tags: clean, basic, structure, starting, base
+*/
+
+@import "styles/css/reset.css";
+@import "styles/css/layout.css";
