@@ -34,7 +34,17 @@
 	
 	.comment-allowed-tags{font-size:.8em;}
 	
+/* sidebars */
+	/* sidebar-one */
+	#sidebar-one{}
+	
 /* footer */
 	.footer{margin:20px 5px;}
 	.copyright{font-size:.8em;}
-	.wordpress-info{display:none;}	
+	.wordpress-info{display:none;}
+	
+/* page specific tags */
+	/* single.php */
+	#single{}
+	/* page.php */
+	#page{}	
