@@ -20,12 +20,12 @@
 		h3{font-weight:bold; font-size:1.1em;}
 		h4{font-size:1.1em;}
 	
-/* main layout */
+/* main wrapper div inside the body tags */
 	#main-wrapper{}			
 	
 /* main navigation */
-	nav ul{list-style:none;}
-	nav ul li{}	
+	.nav ul{list-style:none;}
+	.nav ul li{}	
 	
 /* comments */
 	h3#comments{}
@@ -35,6 +35,6 @@
 	.comment-allowed-tags{font-size:.8em;}
 	
 /* footer */
-	footer{margin:20px 5px;}
+	.footer{margin:20px 5px;}
 	.copyright{font-size:.8em;}
 	.wordpress-info{display:none;}	
