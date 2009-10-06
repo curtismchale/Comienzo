@@ -61,8 +61,8 @@
 			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 			<p><?php bloginfo('description'); ?></p>
 			
-			<nav>
+			<div class="nav">
 				<ul>
 		<?php wp_list_pages('title_li='); ?>
 				</ul>
-			</nav>
+			</div><!-- end div class="nav" -->
