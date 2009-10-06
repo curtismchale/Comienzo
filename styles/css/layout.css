@@ -43,7 +43,17 @@
 	.copyright{font-size:.8em;}
 	.wordpress-info{display:none;}
 	
+/* main site content area */
+
+	/* next and previous links */
+	.next-previous-links{}
+	.next-previous-links li{}
+	.next-previous-links li a, .next-previous-links li a:visited{}
+	.next-previous-links li a:hover, .next-previous-links li a:active, .next-previous-links li a:focus{} 	
+	
 /* page specific tags */
+	/* index.php */
+	#index{}
 	/* single.php */
 	#single{}
 	/* page.php */
