@@ -1,6 +1,6 @@
 <!-- the sitewide javascript assests -->
 <script type="text/javascript">
-// auto removes the values in the search box
+// auto removes the values in text field if they have value of text
 $(document).ready(function(){
 	swapValues = [];
 	    $(".text").each(function(i){
