@@ -37,6 +37,10 @@
 /* sidebars */
 	/* sidebar-one */
 	#sidebar-one{}
+        /* sidebar-two*/
+        #sidebar-two{}
+        /*sidebar-three*/
+        #sidebar-three{}
 	
 /* footer */
 	.footer{margin:20px 5px;}
