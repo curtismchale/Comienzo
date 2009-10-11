@@ -15,10 +15,10 @@
 	
 /* stock styles on site */
 	/* headings */
-		h1{font-weight:bold; font-size:1.3em;}
-		h2{font-weight:bold; font-size:1.2em;}
-		h3{font-weight:bold; font-size:1.1em;}
-		h4{font-size:1.1em;}
+		h1{font-weight:bold; font-size:1.8em;}
+		h2{font-weight:bold; font-size:1.6em;}
+		h3{font-weight:bold; font-size:1.4em;}
+		h4{font-size:1.2em;}
 	
 /* main wrapper div inside the body tags */
 	#main-wrapper{}			
