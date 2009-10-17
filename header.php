@@ -38,9 +38,7 @@
         <!--[if IE 8]>
 			<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>/styles/css/ie8-styles.css" />
 		<![endif]-->
-		
-		<script type="text/javascript" src="styles/js/scripts.js" ></script><!-- includes js for site -->
-		
+				
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />		
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 

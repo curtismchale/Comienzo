@@ -7,6 +7,8 @@
 		</div><!-- div class="footer" -->
 
 	</div><!-- end div id="main-wrapper" -->
+	
+	<script type="text/javascript" src="styles/js/scripts.js" ></script><!-- includes js for site -->	
 
 	</body>
 
