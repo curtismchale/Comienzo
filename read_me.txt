@@ -34,3 +34,4 @@ version 1
 	Dynamic copyright date in footer and blog title automatically included
 	Client side validation of required comment fields
 	Each page can be targeted by itself with an id wrapper placed on the pages
+	Text in search box will automaticaly clear on click and return when you click off. This can be turned off by removing class of text from the text box. Adding the class of text will add this function to any text field.
