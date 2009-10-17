@@ -39,7 +39,6 @@
 			<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>/styles/css/ie8-styles.css" />
 		<![endif]-->
 		
-		<?php include('styles/js/script-includes.php'); ?><!-- includes javascript libraries from google -->
 		<script type="text/javascript" src="styles/js/scripts.js" ></script><!-- includes js for site -->
 		
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />		
