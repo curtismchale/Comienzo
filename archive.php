@@ -43,6 +43,6 @@
 
 <?php get_sidebar(); ?>
 
-</div><!-- end div id="archive" -->
+    </div><!-- end div id="archive" -->
 
 <?php get_footer(); ?>
