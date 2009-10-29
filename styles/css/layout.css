@@ -63,4 +63,6 @@
 	/* page.php */
 	#page{}
 	/* page-custom.php */
-	#page-custom{}	
+	#page-custom{}
+        /* 404.php */
+        #404{}
