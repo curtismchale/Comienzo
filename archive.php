@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+    <div id="archive">
+
 		<?php if (have_posts()) : ?>
 
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
@@ -40,5 +42,7 @@
 	<?php endif; ?>
 
 <?php get_sidebar(); ?>
+
+</div><!-- end div id="archive" -->
 
 <?php get_footer(); ?>
