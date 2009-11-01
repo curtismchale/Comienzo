@@ -36,11 +36,11 @@
 	
 /* sidebars */
 	/* sidebar-one */
-	#sidebar-one{}
-        /* sidebar-two*/
-        #sidebar-two{}
-        /*sidebar-three*/
-        #sidebar-three{}
+		#sidebar-one{}
+    /* sidebar-two*/
+	    #sidebar-two{}
+    /*sidebar-three*/
+    	#sidebar-three{}
 	
 /* footer */
 	.footer{margin:20px 5px;}
@@ -50,23 +50,23 @@
 /* main site content area */
 
 	/* next and previous links */
-	.next-previous-links{}
-	.next-previous-links li{}
-	.next-previous-links li a, .next-previous-links li a:visited{}
-	.next-previous-links li a:hover, .next-previous-links li a:active, .next-previous-links li a:focus{} 	
+		.next-previous-links{}
+		.next-previous-links li{}
+		.next-previous-links li a, .next-previous-links li a:visited{}
+		.next-previous-links li a:hover, .next-previous-links li a:active, .next-previous-links li a:focus{} 	
 	
 /* page specific tags */
 	/* index.php */
-	#index{}
+		#index{}
 	/* single.php */
-	#single{}
+		#single{}
 	/* page.php */
-	#page{}
+		#page{}
 	/* page-custom.php */
-	#page-custom{}
-        /* 404.php */
-        #404{}
-        /* archive */
-        #archive{}
-        /* archives */
-        #archives{}
+		#page-custom{}
+    /* 404.php */
+	    #404{}
+    /* archive */
+	    #archive{}
+    /* archives */
+    	#archives{}
