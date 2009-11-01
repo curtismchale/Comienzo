@@ -89,7 +89,7 @@
 		<label for="url">Website</label>
 	</li>
 	
-</ul>
+</ul><!-- end ul class="comment-form" -->
 
 <?php endif; ?>
 
