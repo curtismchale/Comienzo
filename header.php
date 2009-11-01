@@ -53,15 +53,15 @@
    $dir = $url[1] ? $url[1] : 'home';
 ?>
 
-	<body id="<?php echo $dir ?>">
+    <body id="<?php echo $dir ?>">
 	
-		<div id="main-wrapper">
-	
-			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<p><?php bloginfo('description'); ?></p>
+	<div id="main-wrapper">
+
+            <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+            <p><?php bloginfo('description'); ?></p>
 			
-			<div class="nav">
-				<ul>
-		<?php wp_list_pages('title_li='); ?>
-				</ul>
-			</div><!-- end div class="nav" -->
+            <div class="nav">
+                <ul>
+                    <?php wp_list_pages('title_li='); ?>
+		</ul>
+	    </div><!-- end div class="nav" -->
