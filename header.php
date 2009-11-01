@@ -45,6 +45,13 @@
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<?php wp_head(); ?>
+    
+    <script type="text/javascript">
+		$(document).ready(function() {
+			//comment form validation
+			$("#commentform").validate();
+		});
+	</script>
 
     </head>
 	

@@ -75,12 +75,12 @@
 
 <ul class="comment-form">
 	<li>
-		<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />	
+		<input type="text" name="author" id="author" class="required" minlength="4" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />	
 		<label for="author">Name <span class='<?php if ($req) echo 'required'; ?>'>*</span></label>
 	</li>
 	
 	<li>
-		<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+		<input type="text" name="email" id="email" class="required email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 		<label for="email">Mail (will not be published) <span class='<?php if ($req) echo 'required'; ?>'>*</span></label>
 	</li>
 	
