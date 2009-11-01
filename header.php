@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
-	<head profile="http://gmpg.org/xfn/11">
+	<head>
 		
 		<title>
 			<?php if (is_home()) { echo bloginfo('name');
