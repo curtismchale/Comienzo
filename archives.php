@@ -6,7 +6,9 @@ Template Name: Archives
 
 <?php get_header(); ?>
 
-<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+<div id="archives">
+
+    <?php include (TEMPLATEPATH . '/searchform.php'); ?>
 
 	<h2>Archives by Month:</h2>
 	<ul>
@@ -17,5 +19,7 @@ Template Name: Archives
 	<ul>
 		 <?php wp_list_categories(); ?>
 	</ul>
+        
+</div><!-- end div id="archives" -->        
 
 <?php get_footer(); ?>
