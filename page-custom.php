@@ -6,11 +6,15 @@ Template Name: Custom
 
 <?php get_header(); ?>
 
-<div id="page-custom">
-	<!-- custom page loop goes here -->
+<div id="content">
 	
-	<?php get_sidebar(); ?>
+	<div id="page-custom">
+		<!-- custom page loop goes here -->
 	
-</div>
+		<?php get_sidebar(); ?>
+	
+	</div><!-- /#page-custom -->
+
+</div><!-- /#content -->
 
 <?php get_footer(); ?>

@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div id="content">
+
     <div id="archive">
 
 		<?php if (have_posts()) : ?>
@@ -32,7 +34,7 @@
 		<ul class="next-previous-links">
 			<li><?php next_posts_link('&laquo; Older Entries') ?></li>
 			<li><?php previous_posts_link('Newer Entries &raquo;') ?></li>
-		</ul><!-- end div class="next-previous-links" -->
+		</ul><!-- /.next-previous-links -->
 
 	<?php else : ?>
 
@@ -41,8 +43,10 @@
 
 	<?php endif; ?>
 
-<?php get_sidebar(); ?>
+	    <?php get_sidebar(); ?>
 
-    </div><!-- end div id="archive" -->
+    </div><!-- /#archive -->
+
+</div><!-- /#content -->
 
 <?php get_footer(); ?>
