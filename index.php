@@ -1,5 +1,6 @@
-<div id="index">
-	<?php get_header(); ?>
+<?php get_header(); ?>
+
+	<div id="index">
 	
 		<?php if (have_posts()) : ?>
 	
@@ -12,7 +13,7 @@
 					<?php the_content('Read the rest of this entry &raquo;'); ?>
 	
 					<p><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
-				</div>
+				</div><!-- /.post #post-phpstuffy -->
 	
 			<?php endwhile; ?>
 			
@@ -31,6 +32,6 @@
 	
 	<?php get_sidebar(); ?>
 	
-</div><!-- end div id="index" -->
+</div><!-- /#index -->
 
 <?php get_footer(); ?>
