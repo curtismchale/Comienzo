@@ -1,31 +1,20 @@
 <?php
 // register sidebar one
-	if ( function_exists('register_sidebar') ) {
-	   register_sidebar(array(
-	       'before_widget' => '<li id="%1$s" class="widget %2$s">',
-	       'after_widget' => '</li>',
-	       'before_title' => '<h2 class="widgettitle">',
-	       'after_title' => '</h2>',
-	   ));
-	}
-// register sidebar2
-	if ( function_exists('register_sidebar2') ) {
-	   register_sidebar(array(
-	       'before_widget' => '<li id="%1$s" class="widget %2$s">',
-	       'after_widget' => '</li>',
-	       'before_title' => '<h2 class="widgettitle">',
-	       'after_title' => '</h2>',
-	   ));
-	}
-// register sidebar3
-	if ( function_exists('register_sidebar3') ) {
-	   register_sidebar(array(
-	       'before_widget' => '<li id="%1$s" class="widget %2$s">',
-	       'after_widget' => '</li>',
-	       'before_title' => '<h2 class="widgettitle">',
-	       'after_title' => '</h2>',
-	   ));
-	}
+   if ( function_exists('register_sidebar') ) {
+      register_sidebar(array('name'=>'sidebar2',
+          'before_widget' => '<li id="%1$s" class="widget %2$s">',
+          'after_widget' => '</li>',
+          'before_title' => '<h2 class="widgettitle">',
+          'after_title' => '</h2>',
+      ));
+// register sidebar two      
+   register_sidebar(array('name'=>'sidebar2',
+          'before_widget' => '<li id="%1$s" class="widget %2$s">',
+          'after_widget' => '</li>',
+          'before_title' => '<h2 class="widgettitle">',
+          'after_title' => '</h2>',
+   ));
+}
 // jQuery included from google code
 	if( !is_admin()){
 	   wp_deregister_script('jquery'); 
