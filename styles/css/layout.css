@@ -21,7 +21,13 @@
 		h4{font-size:1.2em;}
 	
 /* main wrapper div inside the body tags */
-	#main-wrapper{}			
+	#main-wrapper{}
+        
+/* header */
+    #header{}
+        #header .blogheader{}
+        #header .bloginfo{}
+
 	
 /* main navigation */
 	.nav ul{list-style:none;}

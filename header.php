@@ -63,12 +63,16 @@
     <body id="<?php echo $dir ?>">
 	
 	<div id="main-wrapper">
+		
+		<div id="header">
 
-            <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-            <p><?php bloginfo('description'); ?></p>
+			<h1 class="blogheader"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+			<p class="bloginfo"><?php bloginfo('description'); ?></p>
 			
-            <div class="nav">
-                <ul>
-                    <?php wp_list_pages('title_li='); ?>
-		</ul>
-	    </div><!-- end div class="nav" -->
+			<div class="nav">
+				<ul>
+				        <?php wp_list_pages('title_li='); ?>
+				</ul>
+			</div><!-- end div class="nav" -->
+	
+	</div><!-- /#header -->
