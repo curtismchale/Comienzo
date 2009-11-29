@@ -22,7 +22,7 @@
 <?php if ($comments) : ?>
 	<h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
-	<ol>
+	<ol class="user-comments">
 
 	<?php foreach ($comments as $comment) : ?>
 
@@ -32,7 +32,7 @@
 			<?php if ($comment->comment_approved == '0') : ?>
 			<p>Your comment is awaiting moderation.</p>
 			<?php endif; ?>
-			<p><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></p>
+			<p><a href="#comment-<?php comment_ID() ?>" title="" class="comment-date"><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></p>
 			<?php comment_text() ?>
 		</li>
 
@@ -43,7 +43,7 @@
 
 	<?php endforeach; /* end for each comment */ ?>
 
-	</ol>
+	</ol><!-- /.user-comments -->
 
  <?php else : // this is displayed if there are no comments so far ?>
 
