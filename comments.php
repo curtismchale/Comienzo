@@ -67,41 +67,41 @@
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 
-<?php if ( $user_ID ) : ?>
-
-<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log out &raquo;</a></p>
-
-<?php else : ?>
-
-<ul class="comment-form">
-	<li>
-		<input type="text" name="author" id="author" class="required" minlength="4" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />	
-		<label for="author">Name <span class='<?php if ($req) echo 'required'; ?>'>*</span></label>
-	</li>
+	<?php if ( $user_ID ) : ?>
 	
-	<li>
-		<input type="text" name="email" id="email" class="required email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-		<label for="email">Mail (will not be published) <span class='<?php if ($req) echo 'required'; ?>'>*</span></label>
-	</li>
+	<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log out &raquo;</a></p>
 	
-	<li>
-		<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-		<label for="url">Website</label>
-	</li>
+	<?php else : ?>
 	
-</ul><!-- end ul class="comment-form" -->
+	<ul class="comment-form">
+		<li>
+			<input type="text" name="author" id="author" class="required" minlength="4" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />	
+			<label for="author">Name <span class='<?php if ($req) echo 'required'; ?>'>*</span></label>
+		</li>
+		
+		<li>
+			<input type="text" name="email" id="email" class="required email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+			<label for="email">Mail (will not be published) <span class='<?php if ($req) echo 'required'; ?>'>*</span></label>
+		</li>
+		
+		<li>
+			<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+			<label for="url">Website</label>
+		</li>
+		
+	</ul><!-- end ul class="comment-form" -->
+	
+	<?php endif; ?>
+	
+	<p class="comment-allowed-tags"><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p>
+	
+	<textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
+	
+	<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+	<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+	<?php do_action('comment_form', $post->ID); ?>
 
-<?php endif; ?>
-
-<p class="comment-allowed-tags"><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p>
-
-<textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
-
-<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
-<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-<?php do_action('comment_form', $post->ID); ?>
-
-</form>
+</form><!-- /#commentform -->
 
 <?php endif; // If registration required and not logged in ?>
 
