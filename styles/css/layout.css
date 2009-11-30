@@ -39,6 +39,12 @@
 	.comment-form{list-style:none;}
 	
 	.comment-allowed-tags{font-size:.8em;}
+        
+        .comment-logged-in{}
+        
+        .comment-date{}
+        
+        .user-comments{}
 	
 /* sidebars */
 	/* sidebar-one */
