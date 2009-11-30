@@ -28,16 +28,16 @@
 	
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 		
-        <!--[if IE 6]>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>/styles/css/ie6-styles.css" />
+	<!--[if IE 6]>
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/styles/css/ie6-styles.css" />
 	<![endif]-->
-        
-        <!--[if IE 7]>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>/styles/css/ie7-styles.css" />
+	
+	    <!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/styles/css/ie7-styles.css" />
 	<![endif]-->
-		
-        <!--[if IE 8]>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>/styles/css/ie8-styles.css" />
+	
+	    <!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/styles/css/ie8-styles.css" />
 	<![endif]-->
 				
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />		
