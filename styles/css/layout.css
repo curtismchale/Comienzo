@@ -60,7 +60,8 @@
 	.wordpress-info{display:none;}
 	
 /* main site content area */
-
+    /* post */
+    .post-tags{}
 	/* next and previous links */
 		.next-previous-links{}
 		.next-previous-links li{}
