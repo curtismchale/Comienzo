@@ -5,9 +5,9 @@
 		
                 <?php wp_footer(); ?>
 	
-            </div><!-- div class="footer" -->
+            </div><!-- /.footer -->
 
-	</div><!-- end div id="main-wrapper" -->
+	</div><!-- /#main-wrapper -->
 	
     <!-- adding jQuery.validate plugin for comment validation client side -->
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/styles/js/jquery.validate.min.js"></script>
