@@ -8,7 +8,12 @@
 	
 	        <div class="post" id="post-<?php the_ID(); ?>">
             
-	            <h2><?php the_title(); ?></h2>
+			<div class="post-heading">
+				<p class="date-published"><?php the_time('M j Y') ?></p>                        
+				<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				<p class="post-author">by <?php the_author() ?></p>
+			</div><!-- /.post-heading -->
+			
 		    <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
 	            <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 	
