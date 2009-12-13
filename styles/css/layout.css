@@ -61,6 +61,11 @@
 	
 /* main site content area */
     /* post */
+    .post ul, .post ol, .post dl{margin:10px;}
+    .post dt{font-weight:bold;}
+    .post dd{margin:0 10px;}
+    .post blockquote{margin:10px 15px;}
+    
     .post-tags{}
 	/* next and previous links */
 		.next-previous-links{}
