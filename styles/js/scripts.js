@@ -1,5 +1,5 @@
-<!-- the sitewide javascript assests -->
 <script type="text/javascript">
+// sitewide javascript assests
 // auto removes the values in text field if they have value of text
 $(document).ready(function(){
 	swapValues = [];
