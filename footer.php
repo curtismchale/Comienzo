@@ -9,7 +9,7 @@
 
 	</div><!-- /#main-wrapper -->
 	
-    <!-- main site js script call -->
+    <!-- calling js for site -->
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/styles/js/scripts.js"></script>
 	
     <!-- adding jQuery.validate plugin for comment validation client side -->
