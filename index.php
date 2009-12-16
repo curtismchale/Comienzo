@@ -21,11 +21,9 @@
 					</div><!-- /.post #post-phpstuffy -->
 	
 				<?php endwhile; ?>
-			
-				<ul class="next-previous-links">
-					<li><?php next_posts_link('&laquo; Older Entries') ?></li>
-					<li><?php previous_posts_link('Newer Entries &raquo;') ?></li>
-				</ul><!-- /.next-previous-links -->
+				
+				<!-- includes next previous links or post level nav -->
+				<?php include('includes/post-navigation.php'); ?>
 			
 			<?php else : ?>
 	
