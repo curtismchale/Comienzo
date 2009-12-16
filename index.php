@@ -23,7 +23,7 @@
 				<?php endwhile; ?>
 				
 				<!-- includes next previous links or post level nav -->
-				<?php include_once('assests/includes/post-navigation.php'); ?>
+				<?php include_once('assets/includes/post-navigation.php'); ?>
 			
 			<?php else : ?>
 	
