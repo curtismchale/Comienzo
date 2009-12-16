@@ -10,10 +10,10 @@
 	</div><!-- /#main-wrapper -->
 	
     <!-- calling js for site -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/styles/js/scripts.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/scripts.js"></script>
 	
     <!-- adding jQuery.validate plugin for comment validation client side -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/styles/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery.validate.min.js"></script>
     
     </body>
 
