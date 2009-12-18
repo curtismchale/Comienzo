@@ -46,13 +46,6 @@
 
 	<?php wp_head(); ?>
     
-    <script type="text/javascript">
-		$(document).ready(function() {
-			//comment form validation
-			$("#commentform").validate();
-		});
-	</script>
-
     </head>
 	
 <?php

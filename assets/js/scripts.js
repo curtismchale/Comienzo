@@ -1,4 +1,3 @@
-<script type="text/javascript">
 // sitewide javascript assests
 // auto removes the values in text field if they have value of text
 $(document).ready(function(){
@@ -16,4 +15,8 @@ $(document).ready(function(){
 	        });
 	    });
 });
-</script>
+
+$(document).ready(function() {
+	//comment form validation
+	$("#commentform").validate();
+});
