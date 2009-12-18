@@ -73,6 +73,6 @@
 				<ul>
 				        <?php wp_list_pages('title_li='); ?>
 				</ul>
-			</div><!-- end div class="nav" -->
+			</div><!-- /.nav -->
 	
 	</div><!-- /#header -->
