@@ -59,7 +59,12 @@
 		
 		<div id="header">
 
-			<h1 class="blogheader"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+			<?php if(is_home()) : ?>
+				<h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
+			<?php else : ?>
+				<h2><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h2>
+			<?php endif;  ?>
+
 			<p class="bloginfo"><?php bloginfo('description'); ?></p>
 			
 			<div class="nav">
