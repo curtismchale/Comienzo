@@ -32,6 +32,7 @@ Version 1
 
 	Features
 	
+    Thumbnails for Wordpress 2.9 turned on in function file automatically
 	jQuery loaded from google code library through the functions file - http://digwp.com/2009/06/use-google-hosted-javascript-libraries-still-the-right-way/
 	Threaded comment JS loaded only if needed - http://peterwilson.cc/articles/including-wordpress-comment-reply-js/
 	ID appended to body element dynamically - http://css-tricks.com/snippets/wordpress/id-the-body-based-on-url/
