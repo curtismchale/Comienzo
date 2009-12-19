@@ -3,21 +3,21 @@
 
 	<head>
 		
-	    <title>
-		<?php if (is_home()) { echo bloginfo('name');
-		} elseif (is_404()) {
-		echo '404 Not Found';
-		} elseif (is_category()) {
-		echo 'Category:'; wp_title('');
-		} elseif (is_search()) {
-		echo 'Search Results';
-		} elseif ( is_day() || is_month() || is_year() ) {
-		echo 'Archives:'; wp_title('');
-		} else {
-		echo wp_title('');
-		}
-		?>
-	</title>
+	    	<title>
+			<?php if (is_home()) { echo bloginfo('name');
+			} elseif (is_404()) {
+			echo '404 Not Found';
+			} elseif (is_category()) {
+			echo 'Category:'; wp_title('');
+			} elseif (is_search()) {
+			echo 'Search Results';
+			} elseif ( is_day() || is_month() || is_year() ) {
+			echo 'Archives:'; wp_title('');
+			} else {
+			echo wp_title('');
+			}
+			?>
+		</title>
 
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
         <meta name="description" content="<?php bloginfo('description') ?>" />
@@ -32,11 +32,11 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/ie6-styles.css" />
 	<![endif]-->
 	
-	    <!--[if IE 7]>
+	<!--[if IE 7]>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/ie7-styles.css" />
 	<![endif]-->
 	
-	    <!--[if IE 8]>
+	<!--[if IE 8]>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/ie8-styles.css" />
 	<![endif]-->
 				
@@ -68,4 +68,4 @@
 				</ul>
 			</div><!-- /.nav -->
 	
-	</div><!-- /#header -->
+		</div><!-- /#header -->
