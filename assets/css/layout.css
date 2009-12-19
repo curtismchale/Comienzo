@@ -67,6 +67,11 @@
 		.post blockquote{margin:10px 15px;}
     
 		.post-tags{}
+	/* post heading */
+		.post-heading{}
+		.date-published{}
+		.post-title{}
+		.post-author{}
 	/* next and previous links */
 		.next-previous-links{}
 		.next-previous-links li{}
