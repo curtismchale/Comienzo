@@ -38,7 +38,7 @@
 				<?php } edit_post_link('Edit this entry.','',''); ?>
 			</p>
 
-		</div><!-- .post -->
+		</div><!-- /.post -->
 
 	<?php comments_template(); ?>
 
