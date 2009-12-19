@@ -24,14 +24,14 @@
 	#main-wrapper{}
         
 /* header */
-    #header{}
-        #header .blogheader{}
-        #header .bloginfo{}
+	#header{}
+		#header .blogheader{}
+		#header .bloginfo{}
 
 	
 /* main navigation */
 	.nav ul{list-style:none;}
-	.nav ul li{}	
+		.nav ul li{}	
 	
 /* comments */
 	h3#comments{}
@@ -49,10 +49,10 @@
 /* sidebars */
 	/* sidebar-one */
 		#sidebar-one{}
-    /* sidebar-two*/
-	    #sidebar-two{}
-    /*sidebar-three*/
-    	#sidebar-three{}
+	/* sidebar-two*/
+		#sidebar-two{}
+	/*sidebar-three*/
+		#sidebar-three{}
 	
 /* footer */
 	.footer{margin:20px 5px;}
@@ -60,13 +60,13 @@
 	.wordpress-info{display:none;}
 	
 /* main site content area */
-    /* post */
-    .post ul, .post ol, .post dl{margin:10px;}
-    .post dt{font-weight:bold;}
-    .post dd{margin:0 10px;}
-    .post blockquote{margin:10px 15px;}
+	/* post */
+		.post ul, .post ol, .post dl{margin:10px;}
+		.post dt{font-weight:bold;}
+		.post dd{margin:0 10px;}
+		.post blockquote{margin:10px 15px;}
     
-    .post-tags{}
+		.post-tags{}
 	/* next and previous links */
 		.next-previous-links{}
 		.next-previous-links li{}
