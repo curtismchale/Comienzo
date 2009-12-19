@@ -29,4 +29,6 @@
 	  }
 	}
 	add_action('get_header', 'theme_queue_js');
+// 2.9 post thumbnails
+add_theme_support('post-thumbnails');
 ?>
