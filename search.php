@@ -14,14 +14,12 @@
 					<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 					<p><?php the_time('l, F jS, Y') ?></p>
 					<p><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
-				</div>
+				</div><!-- /.post -->
 	
 			<?php endwhile; ?>
 	
-			<ul>
-				<li><?php next_post_link('&laquo; Older Entries') ?></li>
-				<li><?php previous_post_link('Newer Entries &raquo;') ?></li>
-			</ul>
+			<!-- includes next previous links or post level nav -->
+			<?php include_once('assets/includes/post-navigation.php'); ?>
 	
 		<?php else : ?>
 	
