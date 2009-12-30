@@ -11,7 +11,7 @@
       ));
 // register sidebar two      
    register_sidebar(array(
-		'name'=>'Alert Area',
+		'name'=>'alert',
 		'description'=>'Used to add an alert to all posts and pages',
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget' => '</li>',
