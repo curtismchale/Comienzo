@@ -76,3 +76,6 @@
 		</div><!-- /#header -->
 		
 		<div id="content">
+		
+	<!-- adds alert area -->
+        <ul id="alert"><?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('alert') ) : ?><?php endif; ?></ul>
