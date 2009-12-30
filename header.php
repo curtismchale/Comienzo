@@ -60,9 +60,9 @@
 		<div id="header">
 
 			<?php if(is_home()) : ?>
-				<h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
+				<h1 class="blogheader"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
 			<?php else : ?>
-				<h2><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h2>
+				<h2 class="blogheader"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h2>
 			<?php endif;  ?>
 
 			<p class="bloginfo"><?php bloginfo('description'); ?></p>
