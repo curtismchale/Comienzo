@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<div id="content">
-
 	<div id="index">
 	
 		<?php if (have_posts()) : ?>
@@ -36,7 +34,5 @@
 		<?php get_sidebar(); ?>
 	
 	</div><!-- /#index -->
-
-</div><!-- /#content -->
 
 <?php get_footer(); ?>

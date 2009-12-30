@@ -1,3 +1,5 @@
+            </div><!-- /#content -->
+            
             <div class="footer">
                 <p class="copyright">&copy; <?php echo date("Y"); echo " "; echo bloginfo('name'); ?></p>
 	

@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<div id="content">
-
     <div id="archive">
 
 		<?php if (have_posts()) : ?>
@@ -59,7 +57,5 @@
 	    <?php get_sidebar(); ?>
 
     </div><!-- /#archive -->
-
-</div><!-- /#content -->
 
 <?php get_footer(); ?>

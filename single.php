@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<div id="content">
-
 	<div id="single">
 	
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -65,5 +63,4 @@
 
 	</div><!-- /#single -->	
 
-</div><!-- /#content -->
 <?php get_footer(); ?>

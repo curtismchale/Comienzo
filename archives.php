@@ -6,8 +6,6 @@ Template Name: Archives
 
 <?php get_header(); ?>
 
-<div id="content">
-
     <div id="archives">
 
         <?php include (TEMPLATEPATH . '/searchform.php'); ?>
@@ -23,7 +21,5 @@ Template Name: Archives
 	</ul>
         
     </div><!-- /#archives -->        
-
-</div><!-- /#content -->
 
 <?php get_footer(); ?>

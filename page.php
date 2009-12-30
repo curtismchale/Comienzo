@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<div id="content">
-
 	<div id="page">
     
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -25,7 +23,5 @@
 		<?php get_sidebar(); ?>
 
 	</div><!-- /#page -->
-
-</div><!-- /#content -->
 
 <?php get_footer(); ?>

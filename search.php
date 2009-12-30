@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-
-<div id="content">
 	
 	<div id="search">
 
@@ -37,7 +35,5 @@
 		<?php get_sidebar(); ?>
 
 	</div><!-- /#search -->
-
-</div><!-- /#content -->
 
 <?php get_footer(); ?>
