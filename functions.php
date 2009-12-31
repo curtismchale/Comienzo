@@ -35,4 +35,14 @@
 	add_action('get_header', 'theme_queue_js');
 // 2.9 post thumbnails
 if(function_exists('add_theme_support')) add_theme_support('post-thumbnails');
+// expand contact info
+function my_new_contactmethods( $contactmethods ) {
+  // Add Twitter
+  $contactmethods['twitter'] = 'Twitter';
+  //add Facebook
+  $contactmethods['facebook'] = 'Facebook';
+ 
+  return $contactmethods;
+}
+add_filter('user_contactmethods','my_new_contactmethods',10,1);
 ?>
