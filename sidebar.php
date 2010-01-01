@@ -1,4 +1,4 @@
-<div id="sidebar-one">
+<div id="sidebar-one" class="sidebar">
 		<ul>
 			<?php 	/* Widgetized sidebar, if you have the plugin installed. */
 					if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
@@ -71,4 +71,4 @@
 
 			<?php endif; ?>
 		</ul>
-</div><!-- end div id="sidebar-one" -->		
+</div><!-- /#sidebar-one .sidebar -->		
