@@ -7,7 +7,10 @@ Template Name: Custom
 <?php get_header(); ?>
 	
 	<div id="page-custom">
-		<!-- custom page loop goes here -->
+    
+    	<div id="content-wrapper">
+			<!-- custom page loop goes here -->
+        </div><!-- /#content-wrapper -->
 	
 		<?php get_sidebar(); ?>
 	

@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 	<div id="index">
+    
+    	<div id="content-wrapper">
 	
 		<?php if (have_posts()) : ?>
 	
@@ -30,6 +32,8 @@
 				<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 	
 			<?php endif; ?>
+            
+            </div><!-- /#content-wrapper -->
 	
 		<?php get_sidebar(); ?>
 	
