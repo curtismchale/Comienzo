@@ -11,7 +11,7 @@
                     <div class="post-heading">
                         <p class="date-published"><?php the_time('M j Y') ?></p>                        
                         <h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-                        <p class="post-author">by <?php the_author() ?></p>
+                        <p class="post-author">by <?php the_author_posts_link() ?></p>
                     </div><!-- /.post-heading -->
         
                     <?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
