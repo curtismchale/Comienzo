@@ -45,4 +45,6 @@ function my_new_contactmethods( $contactmethods ) {
   return $contactmethods;
 }
 add_filter('user_contactmethods','my_new_contactmethods',10,1);
+//load google analytics options panel
+require_once (TEMPLATEPATH . '/assets/includes/analytics-admin-menu.php'); 
 ?>
