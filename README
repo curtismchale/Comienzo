@@ -1,10 +1,12 @@
 Comienzo
 
-Comienzo was started off of Elliot Jay Stock fabulous theme Starkers. I continually found myself adding items to WP themes I built so decided to build a continually evolving base them for WP. Comienzo includes many classes and id's that I use to build a Wordpress theme. I have found that generally I don't have to touch the HTML to implement a design.
+Comienzo was started off of Elliot Jay Stocks fabulous theme Starkers. I continually found myself adding items to WP themes I built so decided to build a continually evolving base them for WP. Comienzo includes many classes and id's that I use to build a Wordpress theme. I have found that generally I don't have to touch the HTML to implement a design.
 
 I'm happy to take suggestions via tickets submitted to Github. I won't be responding to any emails or comments on blog posts regarding this theme. Just keeps things centralized and tracked for me.
 
 Thanks for checking this out and good luck.
+
+View the theme at http://comienzo.curtisdev.ca though it's really not much to look at.
 
 ----------
 THANKS
@@ -32,11 +34,16 @@ Version 1
 
 	Features
 	
-    Thumbnails for Wordpress 2.9 turned on in function file automatically
-	jQuery loaded from google code library through the functions file - http://digwp.com/2009/06/use-google-hosted-javascript-libraries-still-the-right-way/
-	Threaded comment JS loaded only if needed - http://peterwilson.cc/articles/including-wordpress-comment-reply-js/
-	ID appended to body element dynamically - http://css-tricks.com/snippets/wordpress/id-the-body-based-on-url/
+    HTML 5 valid
+	CSS 2.1 valid
+	Thumbnails for Wordpress 2.9 turned on in function file automatically if supported so older versions don't break.
+	jQuery 1.4.0 loaded from google code library through the functions file
+	Threaded comment JS loaded only if needed
+	ID appended to body element dynamically
 	Dynamic copyright date in footer and blog title automatically included
 	Client side validation of required comment fields
 	Each page can be targeted by itself with an id wrapper placed on the pages
 	Text in search box will automaticaly clear on click and return when you click off. This can be turned off by removing class of text from the text box. Adding the class of text will add this function to any text field.
+	Admin panel for clients to add their own tracking scripts like Google Analytics
+	Site title is H1 on home page. On every other page H1 is the page or post title.
+	Solid HTML reset.
