@@ -5,7 +5,7 @@ add_action('admin_menu', 'omr_create_menu');
 function omr_create_menu() {
 
 	//create new top-level menu
-	add_menu_page('Build Internet Settings', 'Build Internet', 'administrator', __FILE__, 'omr_settings_page', 'favicon.ico');
+	add_menu_page('Build Internet Settings', 'Analytics', 'administrator', __FILE__, 'omr_settings_page', 'favicon.ico');
 
 	//call register settings function
 	add_action( 'admin_init', 'register_mysettings' );
@@ -17,7 +17,7 @@ function register_mysettings() {
 function omr_settings_page() {
 ?>
 <div class="wrap">
-<h2>Build Internet Options</h2>
+<h2>Analytics</h2>
 
 <form method="post" action="options.php">
 
