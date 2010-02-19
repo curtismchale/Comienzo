@@ -22,7 +22,7 @@
 // jQuery included from google code
 	if( !is_admin()){
 	   wp_deregister_script('jquery'); 
-	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"), false, '1.3.2'); 
+	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"), false, '1.4.0'); 
 	   wp_enqueue_script('jquery');
 	}
 // WP threaded comments
