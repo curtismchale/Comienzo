@@ -103,6 +103,8 @@
 
 </form><!-- /#commentform -->
 
+<p><?php post_comments_feed_link('Subscribe to Comments'); ?></p>
+
 <?php endif; // If registration required and not logged in ?>
 
 <?php endif; // if you delete this the sky will fall on your head ?>
