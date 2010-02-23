@@ -15,6 +15,7 @@
 
 /* stock presentation items */
 	.clear{clear:both;}
+    .required, .error {color:red;}
 	
 /* typography */
 	body{font-family:Univers, Arial, Helvetica, sans-serif; font-size:11px;}	
