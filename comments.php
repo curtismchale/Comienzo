@@ -75,20 +75,20 @@
 	
 	<ul class="comment-form">
 		<li>
-			<input type="text" name="author" id="author" class="required" minlength="4" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />	
-			<label for="author">Name <span class='<?php if ($req) echo 'required'; ?>'>*</span></label>
+			<label for="author">Name <span class='<?php if ($req) echo 'required'; ?>'>*</span></label>         
+			<input type="text" name="author" id="author" class="required" minlength="4" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 		</li>
-		
+	
 		<li>
-			<input type="text" name="email" id="email" class="required email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 			<label for="email">Mail (will not be published) <span class='<?php if ($req) echo 'required'; ?>'>*</span></label>
+			<input type="text" name="email" id="email" class="required email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 		</li>
-		
+	
 		<li>
-			<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
 			<label for="url">Website</label>
+			<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
 		</li>
-		
+	
 	</ul><!-- /.comment-form -->
 	
 	<?php endif; ?>
