@@ -1,5 +1,6 @@
 # ignore komodo project file
 *.kpf
+*.itProject
 nppBackup
 _notes
 dwsync.xml
