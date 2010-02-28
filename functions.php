@@ -22,6 +22,9 @@
        ));
     } // end function check for register sidebar
 // Load jQuery from Google Code in footer
+
+// TODO: remove version number on JS
+
 function jQueryFooter() {
     if (!is_admin()) {
         wp_deregister_script('jquery');
