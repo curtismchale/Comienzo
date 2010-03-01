@@ -4,15 +4,15 @@ add_action('admin_menu', 'omr_create_menu');
 
 function omr_create_menu() {
 
-	//create new top-level menu
-	add_menu_page('Build Internet Settings', 'Analytics', 'administrator', __FILE__, 'omr_settings_page', 'favicon.ico');
+    //create new top-level menu
+    add_menu_page('Build Internet Settings', 'Analytics', 'administrator', __FILE__, 'omr_settings_page', 'favicon.ico');
 
-	//call register settings function
-	add_action( 'admin_init', 'register_mysettings' );
+    //call register settings function
+    add_action( 'admin_init', 'register_mysettings' );
 }
 function register_mysettings() {
-	//register our settings
-	register_setting( 'omr-settings-group', 'omr_tracking_code' );
+    //register our settings
+    register_setting( 'omr-settings-group', 'omr_tracking_code' );
 }
 function omr_settings_page() {
 ?>
