@@ -17,24 +17,28 @@ function register_mysettings() {
 function omr_settings_page() {
 ?>
 <div class="wrap">
-<h2>Analytics</h2>
+    <style type="text/css">
+        table.analytics td, table.analytics td textarea{width:100%; height:100px;}
+    </style>
 
-<form method="post" action="options.php">
+    <h2>Analytics</h2>
 
-    <?php settings_fields('omr-settings-group'); ?>
-    <table class="form-table">
+    <form method="post" action="options.php">
 
-        <tr valign="top">
-        <th scope="row">Tracking Code</th>
-        <td><textarea name="omr_tracking_code"><?php echo get_option('omr_tracking_code'); ?></textarea></td>
-        </tr>
+        <?php settings_fields('omr-settings-group'); ?>
+        <table class="form-table analytics">
 
-    </table>
+            <tr valign="top">
+                <th scope="row">Tracking Code</th>
+                <td><textarea name="omr_tracking_code"><?php echo get_option('omr_tracking_code'); ?></textarea></td>
+            </tr>
 
-    <p class="submit">
-    <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
-    </p>
+        </table>
 
-</form>
+        <p class="submit">
+        <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+        </p>
+
+    </form>
 </div>
 <?php } ?>
