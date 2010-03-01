@@ -21,16 +21,14 @@
             'after_title' => '</h2>',
        ));
     } // end function check for register sidebar
-// Load jQuery from Google Code in footer
-
-// TODO: remove version number on JS
-// from Rarst on wptavern forum
+// remove version number from jQuery
 add_filter('script_loader_src','restatement_scripts_unversion');
 function restatement_scripts_unversion($src) {
     if( strpos($src,'ajax.googleapis.com') )
         $src=remove_query_arg('ver', $src);
     return $src;
 }
+// Load jQuery from Google Code in footer
 function jQueryFooter() {
     if (!is_admin()) {
         wp_deregister_script('jquery');
