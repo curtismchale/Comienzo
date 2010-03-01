@@ -24,11 +24,16 @@
 // Load jQuery from Google Code in footer
 
 // TODO: remove version number on JS
-
+// from Rarst on wptavern forum
+add_filter('script_loader_src','restatement_scripts_unversion');
+function restatement_scripts_unversion($src) {
+    if( strpos($src,'ajax.googleapis.com') )
+        $src=remove_query_arg('ver', $src);
+    return $src;
+}
 function jQueryFooter() {
     if (!is_admin()) {
         wp_deregister_script('jquery');
-        // or load the Google API copy in the footer
         wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', false, '1.4.2', true );
         wp_enqueue_script('jquery');
     }
