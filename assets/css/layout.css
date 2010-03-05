@@ -68,7 +68,9 @@
 
 /* main site content area */
     /* post */
-        .post ul, .post ol, .post dl{margin:10px;}
+        .post ul, .post ol, .post dl{margin:10px 0 10px 20px;}
+            .post ul li{list-style-type: disc;}
+            .post ol li{list-style-type: decimal;}
         .post dt{font-weight:bold;}
         .post dd{margin:0 10px;}
         .post blockquote{margin:10px 15px;}
