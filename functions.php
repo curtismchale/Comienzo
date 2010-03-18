@@ -1,21 +1,26 @@
 <?php
-if ( function_exists('register_sidebar') ) {
-    // add names of widgetized areas as needed
-    $allWidgetizedAreas = array("footer", "sidebar");
-    
-    foreach ($allWidgetizedAreas as $WidgetAreaName) {
-    
+// register sidebar one
+    if ( function_exists('register_sidebar') ) {
         register_sidebar(array(
-           'name'=> $WidgetAreaName,
-           'before_widget' => '<div id="%1$s" class="widget %2$s left half">',
-           'after_widget' => '</div>',
-           'before_title' => '<h3 class="widgettitle">',
-           'after_title' => '</h3>',
+            'name'=>'sidebar2',
+            'description'=>'add description of the sidebar into functions file',
+            'before_widget' => '<li id="%1$s" class="widget %2$s">',
+            'after_widget' => '</li>',
+            'before_title' => '<h2 class="widgettitle">',
+            'after_title' => '</h2>',
         ));
-    
-    }
-
-}
+// register sidebar two
+        register_sidebar(array(
+            'name'=>'sidebar1',
+            'description'=>'add description of the sidebar into functions file',
+            'name'=>'alert',
+            'description'=>'Used to add an alert to all posts and pages',
+            'before_widget' => '<li id="%1$s" class="widget %2$s">',
+            'after_widget' => '</li>',
+            'before_title' => '<h2 class="widgettitle">',
+            'after_title' => '</h2>',
+       ));
+    } // end function check for register sidebar
 // Load jQuery from Google Code in footer
 function jQueryFooter() {
     if (!is_admin()){
