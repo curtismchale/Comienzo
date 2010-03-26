@@ -66,4 +66,14 @@ function my_new_contactmethods( $contactmethods ) {
 add_filter('user_contactmethods','my_new_contactmethods',10,1);
 //load google analytics options panel
 require_once (TEMPLATEPATH . '/assets/includes/analytics-admin-menu.php');
+// kill things not needed in the WordPress head
+remove_action('wp_head', 'rsd_link'); // kill the RSD link
+remove_action('wp_head', 'wlwmanifest_link'); // kill the WLW link
+remove_action('wp_head', 'index_rel_link'); // kill the index link
+remove_action('wp_head', 'parent_post_rel_link', 10, 0); // kill the prev link
+remove_action('wp_head', 'start_post_rel_link', 10, 0); // kill the start link
+remove_action('wp_head', 'feed_links', 2); // kill post and comment feeds
+remove_action('wp_head', 'feed_links_extra', 3); // kill category, author, and other extra feeds 
+remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // kill adjacent post links
+remove_action('wp_head', 'wp_generator'); // kill the wordpress version number
 ?>
