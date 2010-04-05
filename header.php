@@ -51,7 +51,7 @@
 
         <div id="header">
 
-            <?php if(is_home()) : ?>
+            <?php if(is_front_page()) : ?>
                 <h1 class="blogheader"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
             <?php else : ?>
                 <h2 class="blogheader"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h2>
