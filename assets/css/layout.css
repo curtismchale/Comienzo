@@ -16,6 +16,7 @@
 /* stock presentation items */
     .clear{clear:both;}
     .required, .error {color:red;}
+    input[type=submit]{cursor:pointer;}
 
 /* typography */
     body{font-family:Univers, Arial, Helvetica, sans-serif; font-size:11px;}
