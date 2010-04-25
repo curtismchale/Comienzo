@@ -12,6 +12,7 @@
     .alignleft{float:left }
     .alignright{float:right }
     .wp-caption{border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px;}
+    div.post div.wp-caption a:hover{background:none;} /* removes image hover backgrdom inherited from links */
 
 /* stock presentation items */
     .clear{clear:both;}
