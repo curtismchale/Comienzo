@@ -2,7 +2,7 @@
 // register sidebar one
     if ( function_exists('register_sidebar') ) {
         register_sidebar(array(
-            'name'=>'sidebar2',
+            'name'=>'sidebar',
             'description'=>'add description of the sidebar into functions file',
             'before_widget' => '<li id="%1$s" class="widget %2$s">',
             'after_widget' => '</li>',
@@ -11,8 +11,6 @@
         ));
 // register sidebar two
         register_sidebar(array(
-            'name'=>'sidebar1',
-            'description'=>'add description of the sidebar into functions file',
             'name'=>'alert',
             'description'=>'Used to add an alert to all posts and pages',
             'before_widget' => '<li id="%1$s" class="widget %2$s">',

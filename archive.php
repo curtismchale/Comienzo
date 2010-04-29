@@ -57,7 +57,8 @@
 
         </div><!-- /#content-wrapper -->
 
-        <?php get_sidebar(); ?>
+        <!-- includes sidebar -->
+        <?php include_once('assets/includes/sidebar.php'); ?>
 
     </div><!-- /#archive -->
 
