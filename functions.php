@@ -59,6 +59,8 @@ function my_new_contactmethods( $contactmethods ) {
         $contactmethods['twitter'] = 'Twitter';
     //add Facebook
         $contactmethods['facebook'] = 'Facebook';
+    //add Linkedin
+        $contactmethods['linkedin'] = "Linkedin";
     return $contactmethods;
 }
 add_filter('user_contactmethods','my_new_contactmethods',10,1);
