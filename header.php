@@ -21,6 +21,10 @@
 
         <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
         <meta name="description" content="<?php bloginfo('description') ?>" />
+        
+        <link rel="image_src" link="<?php bloginfo('stylesheet_directory'); ?>/screenshot.png" />
+        
+        <link rel="icon" type="image/png" link="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
 
         <?php if(is_search()) { ?>
             <meta name="robots" content="noindex, nofollow" /> 
