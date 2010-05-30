@@ -18,9 +18,9 @@
     <!-- calling js for site -->
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/scripts.js"></script>
 
-    <?php
-      //Display Google Analytics, etc. from admin menu
-      echo get_option('omr_tracking_code');
+    <?php 
+        // Display Analytics, etc. from admin menu
+        echo get_option('cmnzth_footer_scripts');
     ?>
 
     </body>
