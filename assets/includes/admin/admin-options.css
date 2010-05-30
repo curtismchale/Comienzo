@@ -1,1 +1,9 @@
 /* Here be the CSS for the Admin Options Panel */
+
+/* General Layout Stles */
+.cmnz_input{margin:10px 0;}
+    .cmnz_input label{float:left; display:block; width:200px;}
+    .cmnz_input textarea{width:50%; height:100px; margin:0 10px 0 0;}
+    .cmnz_input small{width:200px; display:block; float:right; padding:10px 0 0 0;}
+
+/* Styles of Speific Inputs */
