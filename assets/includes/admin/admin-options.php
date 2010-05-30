@@ -51,8 +51,11 @@ die;
 add_menu_page($themename, $themename, 'administrator', basename(__FILE__), 'cmnztheme_admin');
 }
 
-function cmnztheme_add_init() {
-}
+
+function cmnztheme_add_init() { // this adds the stylesheet
+    $file_dir=get_bloginfo('template_directory');  
+    wp_enqueue_style("functions", $file_dir."/assets/includes/admin/admin-options.css", false, "1.0", "all");  
+}  
 function cmnztheme_admin() {
  
 global $themename, $shortname, $options;
