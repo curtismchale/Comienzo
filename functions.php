@@ -1,26 +1,8 @@
 <?php
+// setup of admin options
+require_once (TEMPLATEPATH . '/assets/includes/admin/admin-options.php');
 // register sidebar one
-    if ( function_exists('register_sidebar') ) {
-        register_sidebar(array(
-            'name'=>'sidebar2',
-            'description'=>'add description of the sidebar into functions file',
-            'before_widget' => '<li id="%1$s" class="widget %2$s">',
-            'after_widget' => '</li>',
-            'before_title' => '<h2 class="widgettitle">',
-            'after_title' => '</h2>',
-        ));
-// register sidebar two
-        register_sidebar(array(
-            'name'=>'sidebar1',
-            'description'=>'add description of the sidebar into functions file',
-            'name'=>'alert',
-            'description'=>'Used to add an alert to all posts and pages',
-            'before_widget' => '<li id="%1$s" class="widget %2$s">',
-            'after_widget' => '</li>',
-            'before_title' => '<h2 class="widgettitle">',
-            'after_title' => '</h2>',
-       ));
-    } // end function check for register sidebar
+require_once (TEMPLATEPATH . '/assets/includes/functions/sidebars.php');
 // Load jQuery from Google Code in footer
 function jQueryFooter() {
     if (!is_admin()){
@@ -61,11 +43,11 @@ function my_new_contactmethods( $contactmethods ) {
         $contactmethods['twitter'] = 'Twitter';
     //add Facebook
         $contactmethods['facebook'] = 'Facebook';
+    //add Linkedin
+        $contactmethods['linkedin'] = "Linkedin";
     return $contactmethods;
 }
 add_filter('user_contactmethods','my_new_contactmethods',10,1);
-//load google analytics options panel
-require_once (TEMPLATEPATH . '/assets/includes/analytics-admin-menu.php');
 // kill things not needed in the WordPress head
 remove_action('wp_head', 'rsd_link'); // kill the RSD link
 remove_action('wp_head', 'wlwmanifest_link'); // kill the WLW link
