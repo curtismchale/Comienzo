@@ -19,7 +19,7 @@
         array("type" => "close")
     );
     
-function mytheme_add_admin() {
+function cmnztheme_add_admin() {
  
 global $themename, $shortname, $options;
  
@@ -48,12 +48,12 @@ die;
 }
 }
  
-add_menu_page($themename, $themename, 'administrator', basename(__FILE__), 'mytheme_admin');
+add_menu_page($themename, $themename, 'administrator', basename(__FILE__), 'cmnztheme_admin');
 }
 
-function mytheme_add_init() {
+function cmnztheme_add_init() {
 }
-function mytheme_admin() {
+function cmnztheme_admin() {
  
 global $themename, $shortname, $options;
 $i=0;
@@ -178,6 +178,6 @@ $i++;
 }
 ?>
 <?php
-add_action('admin_init', 'mytheme_add_init');
-add_action('admin_menu', 'mytheme_add_admin');
+add_action('admin_init', 'cmnztheme_add_init');
+add_action('admin_menu', 'cmnztheme_add_admin');
 ?>
