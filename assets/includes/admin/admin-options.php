@@ -1,6 +1,6 @@
 <?php
     
-    $themename = "ComienzoStartingTheme";
+    $themename = "Comienzo Developers Theme";
     $shortname = "cmnzth";
 
     // $options holds all of the theme options
