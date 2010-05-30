@@ -96,11 +96,14 @@ case 'text':
 ?>
 
 <div class="cmnz_input cmnz_text">
+
 	<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
  	<input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id'])  ); } else { echo $value['std']; } ?>" />
- <small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
+    <small><?php echo $value['desc']; ?></small>
  
- </div>
+<div class="clearfix"></div>
+ 
+</div><!-- /.cmnz_input .cmnz_text -->
 <?php
 break;
  
@@ -108,12 +111,14 @@ case 'textarea':
 ?>
 
 <div class="cmnz_input cmnz_textarea">
+	
 	<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
  	<textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="" rows=""><?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id']) ); } else { echo $value['std']; } ?></textarea>
- <small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
+    <small><?php echo $value['desc']; ?></small>
+    
+<div class="clearfix"></div>
  
- </div>
-  
+</div><!-- /.cmnz_input /.cmnz_textarea -->
 <?php
 break;
  
@@ -123,13 +128,16 @@ case 'select':
 <div class="cmnz_input cmnz_select">
 	<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
 	
-<select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
-<?php foreach ($value['options'] as $option) { ?>
-		<option <?php if (get_settings( $value['id'] ) == $option) { echo 'selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?>
-</select>
+    <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
+    <?php foreach ($value['options'] as $option) { ?><!-- loops through select box options -->
+    		<option <?php if (get_settings( $value['id'] ) == $option) { echo 'selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?>
+    </select>
 
-	<small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
-</div>
+	<small><?php echo $value['desc']; ?></small>
+	
+<div class="clearfix"></div>
+
+</div><!-- /.cmnz_input .cmnz_select -->
 <?php
 break;
  
@@ -143,8 +151,11 @@ case "checkbox":
 <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
 
 
-	<small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
- </div>
+	<small><?php echo $value['desc']; ?></small>
+
+<div class="clearfix"></div>
+
+</div><!-- /.cmnz_input .cmnz_checkbox -->
 <?php break; 
 case "section":
 
@@ -153,8 +164,18 @@ $i++;
 ?>
 
 <div class="cmnz_section">
-<div class="cmnz_title"><h3><img src="<?php bloginfo('template_directory')?>/functions/images/trans.gif" class="inactive" alt=""><?php echo $value['name']; ?></h3><span class="submit"><input name="save<?php echo $i; ?>" type="submit" value="Save changes" />
-</span><div class="clearfix"></div></div>
+    <div class="cmnz_title">
+        <h3><img src="<?php bloginfo('template_directory')?>/functions/images/trans.gif" class="inactive" alt=""><?php echo $value['name']; ?></h3>
+    
+        <!-- this is the options save button -->
+        <span class="submit">
+            <input name="save<?php echo $i; ?>" type="submit" value="Save changes" />
+        </span>
+
+<div class="clearfix"></div>
+
+    </div><!-- /.cmnz_title -->
+
 <div class="cmnz_options">
 
  
@@ -166,18 +187,20 @@ $i++;
  
 <input type="hidden" name="action" value="save" />
 </form>
+
+<!-- reset theme options button -->
 <form method="post">
-<p class="submit">
-<input name="reset" type="submit" value="Reset" />
-<input type="hidden" name="action" value="reset" />
-</p>
+    <p class="submit">
+        <input name="reset" type="submit" value="Reset" />
+        <input type="hidden" name="action" value="reset" />
+    </p>
 </form>
  
 
 <?php
 }
 ?>
-<?php
+<?php // this actually adds the theme admin menu
 add_action('admin_init', 'cmnztheme_add_init');
 add_action('admin_menu', 'cmnztheme_add_admin');
 ?>
