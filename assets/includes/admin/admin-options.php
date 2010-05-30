@@ -62,10 +62,10 @@ if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><stron
 if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
  
 ?>
-<div class="wrap rm_wrap">
+<div class="wrap cmnz_wrap">
 <h2><?php echo $themename; ?> Settings</h2>
  
-<div class="rm_opts">
+<div class="cmnz_opts">
 <form method="post">
 <?php foreach ($options as $value) {
 switch ( $value['type'] ) {
@@ -95,7 +95,7 @@ case "title":
 case 'text':
 ?>
 
-<div class="rm_input rm_text">
+<div class="cmnz_input cmnz_text">
 	<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
  	<input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id'])  ); } else { echo $value['std']; } ?>" />
  <small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
@@ -107,7 +107,7 @@ break;
 case 'textarea':
 ?>
 
-<div class="rm_input rm_textarea">
+<div class="cmnz_input cmnz_textarea">
 	<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
  	<textarea name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" cols="" rows=""><?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id']) ); } else { echo $value['std']; } ?></textarea>
  <small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
@@ -120,7 +120,7 @@ break;
 case 'select':
 ?>
 
-<div class="rm_input rm_select">
+<div class="cmnz_input cmnz_select">
 	<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
 	
 <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
@@ -136,7 +136,7 @@ break;
 case "checkbox":
 ?>
 
-<div class="rm_input rm_checkbox">
+<div class="cmnz_input cmnz_checkbox">
 	<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
 	
 <?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?>
@@ -152,10 +152,10 @@ $i++;
 
 ?>
 
-<div class="rm_section">
-<div class="rm_title"><h3><img src="<?php bloginfo('template_directory')?>/functions/images/trans.gif" class="inactive" alt=""><?php echo $value['name']; ?></h3><span class="submit"><input name="save<?php echo $i; ?>" type="submit" value="Save changes" />
+<div class="cmnz_section">
+<div class="cmnz_title"><h3><img src="<?php bloginfo('template_directory')?>/functions/images/trans.gif" class="inactive" alt=""><?php echo $value['name']; ?></h3><span class="submit"><input name="save<?php echo $i; ?>" type="submit" value="Save changes" />
 </span><div class="clearfix"></div></div>
-<div class="rm_options">
+<div class="cmnz_options">
 
  
 <?php break;
