@@ -30,6 +30,8 @@
 
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 
+        <link rel="shortcut icon" href="<?php echo get_option('cmnzth_favicon'); ?>" />
+
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />		
 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

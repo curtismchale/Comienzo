@@ -6,16 +6,31 @@
     // $options holds all of the theme options
     $options = array(
         
+        array(
+          "name"        => $themename." Options",
+          "type"        => "title"
+        ),
+        
         array("name" => "General", "type" => "section"),
         
         array("type" => "open"),
         
-        array("name" => "Analytics",
+
+        array(
+            "name" => "Favicon",  
+            "desc" => "A Favicon is a 16x16 pixel .ico image. If you'd like to override the default favicon paste a link to the new one",  
+            "id" => $shortname."_favicon",  
+            "type" => "text",  
+            "std" => get_bloginfo('stylesheet_directory') ."/assets/images/favicon.ico"
+        ),
+        
+        array( // echos scripts into the footer.php file
+            "name"      => "Analytics",
             "desc"      => "Add your analytics tracking scripts here.",
             "id"        => $shortname."_footer_scripts",
             "type"      => "textarea"
         ),
-        
+                
         array("type" => "close")
     );
     
