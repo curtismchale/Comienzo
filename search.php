@@ -6,7 +6,7 @@
 
             <?php if (have_posts()) : ?>
 
-                <h2>Search Results</h2>
+                <h1>Search Results</h1>
 
                 <?php while (have_posts()) : the_post(); ?>
 
