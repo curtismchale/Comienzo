@@ -10,7 +10,14 @@
                 
                 <div class="post-heading">
                     <p class="date-published"><?php the_time('M j Y') ?></p>                        
-                    <h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+                    
+                    <!-- conditionally displays h1 if is not the frontpage of the site -->
+                    <?php if (is_front_page()) : ?>
+                        <h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+                    <?php else: ?>
+                        <h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                    <?php endif; ?>
+                    
                     <p class="post-author">by <?php the_author_posts_link() ?></p>
                 </div><!-- /.post-heading -->
 
