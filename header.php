@@ -32,7 +32,7 @@
 
         <link rel="shortcut icon" href="<?php echo get_option('cmnzth_favicon'); ?>" />
 
-        <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />		
+        <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php echo get_option('cmnzth_rss_feed'); ?>" />		
 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 

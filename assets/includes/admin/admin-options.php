@@ -16,12 +16,20 @@
         array("type" => "open"),
         
 
-        array(
-            "name" => "Favicon",  
-            "desc" => "A Favicon is a 16x16 pixel .ico image. If you'd like to override the default favicon paste a link to the new one",  
-            "id" => $shortname."_favicon",  
-            "type" => "text",  
-            "std" => get_bloginfo('stylesheet_directory') ."/assets/images/favicon.ico"
+        array(// lets you override the default favicon
+            "name"      => "Favicon",  
+            "desc"      => "A Favicon is a 16x16 pixel .ico image. If you'd like to override the default favicon paste a link to the new one",  
+            "id"        => $shortname."_favicon",  
+            "type"      => "text",  
+            "std"       => get_bloginfo('stylesheet_directory') ."/assets/images/favicon.ico"
+        ),
+        
+        array(// lets you override the default RSS feed
+            "name"      => "RSS Feed",  
+            "desc"      => "Override the default WordPress RSS feed here.",  
+            "id"        => $shortname."_rss_feed",  
+            "type"      => "text",  
+            "std"       => get_bloginfo('rss2_url')
         ),
         
         array( // echos scripts into the footer.php file
