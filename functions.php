@@ -2,7 +2,29 @@
 // setup of admin options
 require_once (TEMPLATEPATH . '/assets/includes/admin/admin-options.php');
 // register sidebar one
+<<<<<<< HEAD
+    if ( function_exists('register_sidebar') ) {
+        register_sidebar(array(
+            'name'=>'sidebar',
+            'description'=>'add description of the sidebar into functions file',
+            'before_widget' => '<li id="%1$s" class="widget %2$s">',
+            'after_widget' => '</li>',
+            'before_title' => '<h2 class="widgettitle">',
+            'after_title' => '</h2>',
+        ));
+// register sidebar two
+        register_sidebar(array(
+            'name'=>'alert',
+            'description'=>'Used to add an alert to all posts and pages',
+            'before_widget' => '<li id="%1$s" class="widget %2$s">',
+            'after_widget' => '</li>',
+            'before_title' => '<h2 class="widgettitle">',
+            'after_title' => '</h2>',
+       ));
+    } // end function check for register sidebar
+=======
 require_once (TEMPLATEPATH . '/assets/includes/functions/sidebars.php');
+>>>>>>> development
 // Load jQuery from Google Code in footer
 function jQueryFooter() {
     if (!is_admin()){

@@ -21,6 +21,10 @@
 
         <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
         <meta name="description" content="<?php bloginfo('description') ?>" />
+        
+        <link rel="image_src" link="<?php bloginfo('stylesheet_directory'); ?>/screenshot.png" />
+        
+        <link rel="icon" type="image/png" link="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
 
         <?php if(is_search()) { ?>
             <meta name="robots" content="noindex, nofollow" /> 
@@ -35,6 +39,9 @@
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php echo get_option('cmnzth_rss_feed'); ?>" />		
 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+        
+        <!-- facebook site image -->
+        <link rel="image_src" href="<?php bloginfo('stylesheet_directory');?>/screenshot.png" />
 
     </head>
 
@@ -49,7 +56,7 @@
 
         <div id="header">
 
-            <?php if(is_home()) : ?>
+            <?php if(is_front_page()) : ?>
                 <h1 class="blogheader"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
             <?php else : ?>
                 <h2 class="blogheader"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h2>
