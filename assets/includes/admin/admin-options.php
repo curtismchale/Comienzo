@@ -1,6 +1,6 @@
 <?php
     
-    $themename = "Comienzo Developers Theme";
+    $themename = "Theme Options";
     $shortname = "cmnzth";
 
     // $options holds all of the theme options
@@ -113,7 +113,7 @@ case "close":
  
 case "title":
 ?>
-<p>To easily use the <?php echo $themename;?> theme, you can use the menu below.</p>
+<p>To easily use the <?php echo $themename;?>, you can use the menu below.</p>
 
  
 <?php break;
