@@ -1,5 +1,8 @@
 <?php
+// setup of admin options
+require_once (TEMPLATEPATH . '/assets/includes/admin/admin-options.php');
 // register sidebar one
+<<<<<<< HEAD
     if ( function_exists('register_sidebar') ) {
         register_sidebar(array(
             'name'=>'sidebar',
@@ -19,6 +22,9 @@
             'after_title' => '</h2>',
        ));
     } // end function check for register sidebar
+=======
+require_once (TEMPLATEPATH . '/assets/includes/functions/sidebars.php');
+>>>>>>> development
 // Load jQuery from Google Code in footer
 function jQueryFooter() {
     if (!is_admin()){
@@ -64,8 +70,6 @@ function my_new_contactmethods( $contactmethods ) {
     return $contactmethods;
 }
 add_filter('user_contactmethods','my_new_contactmethods',10,1);
-//load google analytics options panel
-require_once (TEMPLATEPATH . '/assets/includes/analytics-admin-menu.php');
 // kill things not needed in the WordPress head
 remove_action('wp_head', 'rsd_link'); // kill the RSD link
 remove_action('wp_head', 'wlwmanifest_link'); // kill the WLW link

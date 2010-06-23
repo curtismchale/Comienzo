@@ -34,11 +34,9 @@
 
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 
-        <!--[if IE 6]>
-            <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/ie6-styles.css" />
-        <![endif]-->
+        <link rel="shortcut icon" href="<?php echo get_option('cmnzth_favicon'); ?>" />
 
-        <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />		
+        <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php echo get_option('cmnzth_rss_feed'); ?>" />		
 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         
