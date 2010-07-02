@@ -58,4 +58,21 @@ remove_action('wp_head', 'feed_links', 2); // kill post and comment feeds
 remove_action('wp_head', 'feed_links_extra', 3); // kill category, author, and other extra feeds 
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // kill adjacent post links
 remove_action('wp_head', 'wp_generator'); // kill the wordpress version number
+// security tweaks
+add_filter('login_errors',create_function('$a', "return null;")); // remove login error notes
+// checks for really long requests, eval and base64 and return 414 to query
+if($user_ID) {
+  if(!current_user_can('level_10')) {
+    if (strlen($_SERVER['REQUEST_URI']) > 255 ||
+      strpos($_SERVER['REQUEST_URI'], "eval(") ||
+      strpos($_SERVER['REQUEST_URI'], "CONCAT") ||
+      strpos($_SERVER['REQUEST_URI'], "UNION+SELECT") ||
+      strpos($_SERVER['REQUEST_URI'], "base64")) {
+        @header("HTTP/1.1 414 Request-URI Too Long");
+	@header("Status: 414 Request-URI Too Long");
+	@header("Connection: Close");
+	@exit;
+    }
+  }
+}
 ?>
