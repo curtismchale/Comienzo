@@ -3,6 +3,28 @@
 require_once (TEMPLATEPATH . '/assets/includes/admin/admin-options.php');
 // includes sidebars
 require_once (TEMPLATEPATH . '/assets/includes/functions/sidebars.php');
+//fixing the_excerpt
+function improved_trim_excerpt($text) {
+	global $post;
+	if ( '' == $text ) {
+		$text = get_the_content('');
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]>', ']]&gt;', $text);
+		$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+		$text = strip_tags($text, '<p>,<ul>,<li>,<ol>');
+		$excerpt_length = 55;
+		$words = explode(' ', $text, $excerpt_length + 1);
+		if (count($words)> $excerpt_length) {
+			array_pop($words);
+			array_push($words, '[...]');
+			$text = implode(' ', $words);
+		}
+	}
+	return $text;
+}
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'improved_trim_excerpt');
 // Load jQuery from Google Code in footer
 function jQueryFooter() {
     if (!is_admin()){
