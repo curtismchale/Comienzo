@@ -80,6 +80,10 @@ remove_action('wp_head', 'feed_links', 2); // kill post and comment feeds
 remove_action('wp_head', 'feed_links_extra', 3); // kill category, author, and other extra feeds 
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // kill adjacent post links
 remove_action('wp_head', 'wp_generator'); // kill the wordpress version number
+// removing a really bad filter idea by Matt M
+remove_filter( 'the_content', 'capital_P_dangit' );
+remove_filter( 'the_title', 'capital_P_dangit' );
+remove_filter( 'comment_text', 'capital_P_dangit' );
 // security tweaks
 add_filter('login_errors',create_function('$a', "return null;")); // remove login error notes
 // checks for really long requests, eval and base64 and return 414 to query
