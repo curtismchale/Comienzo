@@ -13,3 +13,6 @@
 /* Global reset-RESET */
 /* The below restores some sensible defaults */
     a img{border:none} /* Gets rid of IE's blue borders */
+
+/* HTML 5 generic */
+header, footer{display:block;}

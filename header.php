@@ -33,6 +33,11 @@
         <?php wp_head(); ?>
 
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
+        
+        <!-- adding HTML5 support for IE -->
+        <!--[if lt IE 9]>  
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+        <![endif]-->
 
         <link rel="shortcut icon" href="<?php echo get_option('cmnzth_favicon'); ?>" />
 
@@ -54,7 +59,7 @@
 
     <div id="main-wrapper">
 
-        <div id="header">
+        <header>
 
             <?php if(is_front_page()) : ?>
                 <h1 class="blogheader"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
@@ -64,13 +69,13 @@
 
             <p class="bloginfo"><?php bloginfo('description'); ?></p>
 
-            <div class="nav">
+            <nav>
                 <ul>
                     <?php wp_list_pages('title_li='); ?>
                 </ul>
-            </div><!-- /.nav -->
+            </nav><!-- /nav -->
 
-        </div><!-- /#header -->
+        </header><!-- /header -->
 
         <div id="content">
 
