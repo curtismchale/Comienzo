@@ -27,7 +27,7 @@
 
             <?php while (have_posts()) : the_post(); ?>
 
-                <div class="post" id="post-<?php the_ID(); ?>">
+                <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
                    <div class="post-heading">
                                <p class="date-published"><?php the_time('M j Y') ?></p>
@@ -41,7 +41,7 @@
 
                                <p class="post-tags"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
 
-                       </div><!-- /.post #post-phpstuffy -->
+                       </article><!-- /post_class(); -->
 
             <?php endwhile; ?>
 
