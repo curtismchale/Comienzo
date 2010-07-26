@@ -9,7 +9,7 @@
             <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
                 
                 <div class="post-heading">
-                    <p class="date-published"><?php the_time('M j Y') ?></p>                        
+                    <time class="date-published"><?php the_time('M j Y') ?></time>
                     
                     <!-- conditionally displays h1 if is not the frontpage of the site -->
                     <?php if (is_front_page()) : ?>
