@@ -19,4 +19,6 @@ jQuery(document).ready(function(){
 jQuery(document).ready(function() {
     //comment form validation
     jQuery("#commentform").validate();
+    // killing image rollover background
+    jQuery('img').parent('a').addClass('image');
 });
