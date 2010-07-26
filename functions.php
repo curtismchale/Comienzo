@@ -3,6 +3,28 @@
 require_once (TEMPLATEPATH . '/assets/includes/admin/admin-options.php');
 // includes sidebars
 require_once (TEMPLATEPATH . '/assets/includes/functions/sidebars.php');
+//fixing the_excerpt
+function improved_trim_excerpt($text) {
+	global $post;
+	if ( '' == $text ) {
+		$text = get_the_content('');
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]>', ']]&gt;', $text);
+		$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+		$text = strip_tags($text, '<p>,<ul>,<li>,<ol>');
+		$excerpt_length = 55;
+		$words = explode(' ', $text, $excerpt_length + 1);
+		if (count($words)> $excerpt_length) {
+			array_pop($words);
+			array_push($words, '[...]');
+			$text = implode(' ', $words);
+		}
+	}
+	return $text;
+}
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'improved_trim_excerpt');
 // Load jQuery from Google Code in footer
 function jQueryFooter() {
     if (!is_admin()){
@@ -58,4 +80,25 @@ remove_action('wp_head', 'feed_links', 2); // kill post and comment feeds
 remove_action('wp_head', 'feed_links_extra', 3); // kill category, author, and other extra feeds 
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // kill adjacent post links
 remove_action('wp_head', 'wp_generator'); // kill the wordpress version number
+// removing a really bad filter idea by Matt M
+remove_filter( 'the_content', 'capital_P_dangit' );
+remove_filter( 'the_title', 'capital_P_dangit' );
+remove_filter( 'comment_text', 'capital_P_dangit' );
+// security tweaks
+add_filter('login_errors',create_function('$a', "return null;")); // remove login error notes
+// checks for really long requests, eval and base64 and return 414 to query
+if($user_ID) {
+  if(!current_user_can('level_10')) {
+    if (strlen($_SERVER['REQUEST_URI']) > 255 ||
+      strpos($_SERVER['REQUEST_URI'], "eval(") ||
+      strpos($_SERVER['REQUEST_URI'], "CONCAT") ||
+      strpos($_SERVER['REQUEST_URI'], "UNION+SELECT") ||
+      strpos($_SERVER['REQUEST_URI'], "base64")) {
+        @header("HTTP/1.1 414 Request-URI Too Long");
+	@header("Status: 414 Request-URI Too Long");
+	@header("Connection: Close");
+	@exit;
+    }
+  }
+}
 ?>

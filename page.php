@@ -6,10 +6,10 @@
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                <div class="post" id="post-<?php the_ID(); ?>">
+            <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
                 
                 <div class="post-heading">
-                    <p class="date-published"><?php the_time('M j Y') ?></p>                        
+                    <time class="date-published"><?php the_time('M j Y') ?></time>
                     
                     <!-- conditionally displays h1 if is not the frontpage of the site -->
                     <?php if (is_front_page()) : ?>
@@ -24,7 +24,7 @@
                 <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
                     <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 
-                </div><!-- /.post #post-phpstuffy -->
+                </article><!-- /post_class(); -->
 
                 <?php endwhile; endif; ?>
             <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>

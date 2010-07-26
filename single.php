@@ -6,10 +6,10 @@
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                <div class="post" id="post-<?php the_ID(); ?>">
+                <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
                     <div class="post-heading">
-                        <p class="date-published"><?php the_time('M j Y') ?></p>
+                        <time class="date-published"><?php the_time('M j Y') ?></time>
                         <h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
                         <p class="post-author">by <?php the_author_posts_link() ?></p>
                     </div><!-- /.post-heading -->
@@ -23,7 +23,7 @@
                         <?php edit_post_link('Edit this entry','','.'); ?>
                     </p>
 
-                </div><!-- /.post #post-phpstuffy -->
+                </article><!-- /post_class(); -->
 
             <?php comments_template(); ?>
 
