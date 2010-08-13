@@ -1,21 +1,41 @@
 /* Global reset */
 /* Based upon 'reset.css' in the Yahoo! User Interface Library: http://developer.yahoo.com/yui */
-    *, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td{margin:0; padding:0}
-    table{border-collapse:collapse; border-spacing:0}
-    fieldset, img{border:0}
-    address, caption, cite, code, dfn, th, var{font-style:normal; font-weight:normal}
-    ol, ul, li{list-style:none}
-    caption, th{text-align:left}
-    h1, h2, h3, h4, h5, h6{font-size:100%; font-weight:normal}
-    q:before, q:after { content:''}
-    input{background:transparent;}
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header,
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
 
 /* Global reset-RESET */
 /* The below restores some sensible defaults */
     a img{border:none} /* Gets rid of IE's blue borders */
 
 /* HTML 5 generic */
-    header, footer{display:block;}
-
+    header, footer, article, aside, figure, hgroup, nav, section{display:block;}
+    nav ul{list-style-type:none;}
+    a {margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent;}
+    ins{background-color:#ff9; color:#000; text-decoration:none;}
+    mark{background-color:#ff9; color:#000; font-style:italic; font-weight:bold;}
+    del{text-decoration:line-through;}
+    hr{display:block; height:1px; border:0; border-top:1px solid #CCC; margin:1em 0; padding:0;}
+    input, select{vertical-align:middle;}
+    
+    /* tables need cellspacing=0 in markup */
+    table{border-collapse:collapse; border-spacing:0;}
+    
 /* kills background rollover on images based on .js class in scripts.js */
     div.post div.wp-caption a:hover{background:none;}
