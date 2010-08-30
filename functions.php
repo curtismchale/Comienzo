@@ -3,6 +3,8 @@
 require_once (TEMPLATEPATH . '/assets/includes/admin/admin-options.php');
 // includes sidebars
 require_once (TEMPLATEPATH . '/assets/includes/functions/sidebars.php');
+// includes comment stuff
+require_once (TEMPLATEPATH . '/assets/includes/custom-comment-styles.php');
 //fixing the_excerpt
 function improved_trim_excerpt($text) {
 	global $post;
@@ -49,14 +51,6 @@ function restatement_scripts_unversion($src) {
         $src=remove_query_arg('ver', $src);
     return $src;
 }
-// WP threaded comments
-    function theme_queue_js(){
-        if (!is_admin()){
-            if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1))
-            wp_enqueue_script( 'comment-reply' );
-        }
-    }
-    add_action('get_header', 'theme_queue_js');
 // 2.9 post thumbnails
     if(function_exists('add_theme_support')) add_theme_support('post-thumbnails');
 // expand contact info
@@ -86,19 +80,4 @@ remove_filter( 'the_title', 'capital_P_dangit' );
 remove_filter( 'comment_text', 'capital_P_dangit' );
 // security tweaks
 add_filter('login_errors',create_function('$a', "return null;")); // remove login error notes
-// checks for really long requests, eval and base64 and return 414 to query
-if($user_ID) {
-  if(!current_user_can('level_10')) {
-    if (strlen($_SERVER['REQUEST_URI']) > 255 ||
-      strpos($_SERVER['REQUEST_URI'], "eval(") ||
-      strpos($_SERVER['REQUEST_URI'], "CONCAT") ||
-      strpos($_SERVER['REQUEST_URI'], "UNION+SELECT") ||
-      strpos($_SERVER['REQUEST_URI'], "base64")) {
-        @header("HTTP/1.1 414 Request-URI Too Long");
-	@header("Status: 414 Request-URI Too Long");
-	@header("Connection: Close");
-	@exit;
-    }
-  }
-}
 ?>
