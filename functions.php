@@ -31,10 +31,10 @@ add_filter('get_the_excerpt', 'improved_trim_excerpt');
 function jQueryFooter() {
     if (!is_admin()){
         wp_deregister_script('jquery');
-        wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"), false, '1.4.2',true);
+        wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"), false, '1.4.3',true);
         wp_enqueue_script('jquery');
     }
-} 
+}
 add_action('init', 'jQueryFooter');
 function restatement_footer_scripts() {
     if (!is_admin()){
@@ -42,7 +42,7 @@ function restatement_footer_scripts() {
         wp_register_script('scripts', get_stylesheet_directory_uri().$js,array('jquery'),filemtime(STYLESHEETPATH.$js),true);
         wp_print_scripts('scripts');
     }
-} 
+}
 add_action('wp_footer', 'restatement_footer_scripts');
 // remove version number from jQuery
 add_filter('script_loader_src','restatement_scripts_unversion');
@@ -71,7 +71,7 @@ remove_action('wp_head', 'index_rel_link'); // kill the index link
 remove_action('wp_head', 'parent_post_rel_link', 10, 0); // kill the prev link
 remove_action('wp_head', 'start_post_rel_link', 10, 0); // kill the start link
 remove_action('wp_head', 'feed_links', 2); // kill post and comment feeds
-remove_action('wp_head', 'feed_links_extra', 3); // kill category, author, and other extra feeds 
+remove_action('wp_head', 'feed_links_extra', 3); // kill category, author, and other extra feeds
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // kill adjacent post links
 remove_action('wp_head', 'wp_generator'); // kill the wordpress version number
 // removing a really bad filter idea by Matt M
