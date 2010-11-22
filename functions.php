@@ -31,7 +31,7 @@ add_filter('get_the_excerpt', 'improved_trim_excerpt');
 function jQueryFooter() {
     if (!is_admin()){
         wp_deregister_script('jquery');
-        wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"), false, '1.4.3',true);
+        wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"), false, '1.4.3',true);
         wp_enqueue_script('jquery');
     }
 }
