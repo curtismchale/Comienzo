@@ -34,9 +34,8 @@
             <?php endif; ?>
 
             </div><!-- /#content-wrapper -->
-            
-            <!-- includes sidebar -->
-            <?php include_once('assets/includes/sidebar.php'); ?>
+
+        <?php get_sidebar(); ?>
 
     </div><!-- /#index -->
 
