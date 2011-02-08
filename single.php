@@ -28,7 +28,7 @@
             <?php comments_template(); ?>
 
                 <!-- includes next previous links or post level nav -->
-                <?php include_once('assets/includes/post-navigation.php'); ?>
+                <?php include_once(locate_template(array('assets/includes/post-navigation.php') )); ?>
 
                 <?php endwhile; else: ?>
 
