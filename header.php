@@ -37,7 +37,7 @@
         	if ( is_singular() && get_option( 'thread_comments' ) )
         		wp_enqueue_script( 'comment-reply' );
     	?>
-    	
+
         <?php wp_head(); ?>
 
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
