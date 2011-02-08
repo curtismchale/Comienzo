@@ -51,7 +51,7 @@
         <?php else : ?>
 
             <h2>Not Found</h2>
-            <?php include (TEMPLATEPATH . '/searchform.php'); ?>
+            <?php get_search_form(); ?>
 
         <?php endif; ?>
 
