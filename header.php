@@ -58,14 +58,7 @@
 
     </head>
 
-<?php
-   $url = explode('/',$_SERVER['REQUEST_URI']);
-   $dir = $url[1] ? $url[1] : 'home';
-?>
-<!--
-	TODO body_class
--->
-    <body id="<?php echo $dir ?>">
+<body <?php body_class(); ?> >
 
     <div id="main-wrapper">
 
