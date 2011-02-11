@@ -54,6 +54,7 @@ function restatement_scripts_unversion($src) {
 /* === ADD THEME SUPPORT === */
     if( function_exists('add_theme_support')) add_theme_support('post-thumbnails');
     if( function_exists('add_theme_support')) add_theme_support('automatic-feed-links');
+    if( function_exists('add_theme_support')) add_theme_support('post-formats');
 // expand contact info
 function my_new_contactmethods( $contactmethods ) {
     // Add Twitter
