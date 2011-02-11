@@ -51,8 +51,9 @@ function restatement_scripts_unversion($src) {
         $src=remove_query_arg('ver', $src);
     return $src;
 }
-// 2.9 post thumbnails
-    if(function_exists('add_theme_support')) add_theme_support('post-thumbnails');
+/* === ADD THEME SUPPORT === */
+    if( function_exists('add_theme_support')) add_theme_support('post-thumbnails');
+    if( function_exists('add_theme_support')) add_theme_support('automatic-feed-links');
 // expand contact info
 function my_new_contactmethods( $contactmethods ) {
     // Add Twitter
