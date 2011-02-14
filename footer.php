@@ -12,9 +12,6 @@
 
     <?php wp_footer(); ?>
 
-    <!-- adding jQuery.validate plugin for comment validation client side -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery.validate.min.js"></script>
-
     <?php
         // Display Analytics, etc. from admin menu
         echo get_option('cmnzth_footer_scripts');
