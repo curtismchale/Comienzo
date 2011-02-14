@@ -89,7 +89,13 @@ function theme_options_do_page() {
 				/**
 				 * A sample checkbox option
 				 */
+				/*
+				    TODO analytics option
+				    TODO favicon option
+				    TODO facebook image option
+				*/
 				?>
+
 				<tr valign="top"><th scope="row"><?php _e( 'A checkbox' ); ?></th>
 					<td>
 						<input id="comienzo_theme_options[option1]" name="comienzo_theme_options[option1]" type="checkbox" value="1" <?php checked( '1', $options['option1'] ); ?> />
