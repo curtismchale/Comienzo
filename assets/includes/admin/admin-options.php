@@ -85,10 +85,11 @@ function theme_options_do_page() {
 
 			<table class="form-table">
 
+			    <p class="submit">
+    				<input type="submit" class="button-primary" value="<?php _e( 'Save Options' ); ?>" />
+    			</p>
+
 				<?php
-				/**
-				 * A sample checkbox option
-				 */
 				/*
 				    TODO analytics option
 				    TODO favicon option
@@ -100,10 +101,33 @@ function theme_options_do_page() {
 
 				<tr valign="top"><th scope="row"><?php _e( 'Favicon' ); ?></th>
 					<td>
-						<input id="comienzo_theme_options[faviconlocation]" class="regular-text" type="text" name="comienzo_theme_options[faviconlocation]" value="<?php esc_attr_e( $options['faviconlocation'] ); ?>" />
+						<input id="comienzo_theme_options[faviconlocation]" class="regular-text" type="text" name="comienzo_theme_options[faviconlocation]" value="<?php if( isset( $options['faviconlocation'] )) { esc_attr_e( $options['faviconlocation'] ); } else { echo get_stylesheet_directory_uri(); ?>/favicon.ico<?php } ?>" />
 						<label class="description" for="comienzo_theme_options[faviconlocation]"><?php _e( 'Enter the Full URL of your Favicon' ); ?></label>
 					</td>
 				</tr>
+
+				<tr valign="top"><th scope="row"><?php _e( 'Facebook Image' ); ?></th>
+					<td>
+						<input id="comienzo_theme_options[facebookimage]" class="regular-text" type="text" name="comienzo_theme_options[facebookimage]" value="<?php if( isset( $options['facebookimage'] )) { esc_attr_e( $options['facebookimage'] ); } else { echo get_stylesheet_directory_uri(); ?>/screenshot.png<?php } ?>" />
+						<label class="description" for="comienzo_theme_options[facebookimage]"><?php _e( 'Enter the Full URL of your Facebook image' ); ?></label>
+					</td>
+				</tr>
+
+				<tr><td><h3>Footer</h3></td></tr>
+				<tr valign="top"><th scope="row"><?php _e( 'Analytics Code' ); ?></th>
+					<td>
+						<textarea id="comienzo_theme_options[analytics]" class="large-text" cols="50" rows="10" name="comienzo_theme_options[analytics]"><?php if( isset( $options['analytics'] )) { echo stripslashes( $options['analytics'] ); } ?></textarea>
+						<label class="description" for="comienzo_theme_options[analytics]"><?php _e( 'Enter any analytics code here and it will end up in the footer of the site' ); ?></label>
+					</td>
+				</tr>
+
+				<tr><td><h3>Samples </h3></td></tr>
+
+				<?php
+				/**
+				* A sample checkbox option
+				**/
+				?>
 
 				<tr valign="top"><th scope="row"><?php _e( 'A checkbox' ); ?></th>
 					<td>
@@ -216,6 +240,7 @@ function theme_options_validate( $input ) {
 	// Say our text option must be safe text with no HTML tags
 	$input['sometext'] = wp_filter_nohtml_kses( $input['sometext'] );
 	$input['faviconlocation'] = wp_filter_nohtml_kses( $input['faviconlocation'] );
+	$input['facebookimage'] = wp_filter_nohtml_kses( $input['facebookimage'] );
 
 	// Our select option must actually be in our array of select options
 	if ( ! array_key_exists( $input['selectinput'], $select_options ) )

@@ -13,8 +13,9 @@
     <?php wp_footer(); ?>
 
     <?php
-        // Display Analytics, etc. from admin menu
-        echo get_option('cmnzth_footer_scripts');
+        /* displays footer scripts */
+        $options = get_option( 'comienzo_theme_options' );
+        echo $options['analytics'];
     ?>
 
     </body>
