@@ -13,7 +13,7 @@
                     <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
                     <h1>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h1>
                     <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-                    <h1>Archive for <?php the_time('F jS, Y'); ?></h1>
+                    <h1>Archive for <?php the_time( get_option('date_format') ); ?></h1>
                     <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
                     <h1>Archive for <?php the_time('F, Y'); ?></h1>
                     <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
@@ -30,16 +30,16 @@
                 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
                    <div class="post-heading">
-                            <time class="date-published"><?php the_time('M j Y') ?></time>
-                               <h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                               <p class="post-author">by <?php the_author_posts_link() ?></p>
+                            <time class="date-published"><?php the_time( get_option('date_format') ); ?></time>
+                               <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+                               <p class="post-author">by <?php the_author_posts_link(); ?></p>
                            </div><!-- /.post-heading -->
 
                            <div class="post-content">
                                <?php the_content('Read the rest of this entry &raquo;'); ?>
                            </div><!-- /.post-content -->
 
-                               <p class="post-tags"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
+                               <p class="post-tags"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', '); ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
 
                        </article><!-- /post_class(); -->
 
