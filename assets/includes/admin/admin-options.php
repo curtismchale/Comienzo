@@ -96,6 +96,15 @@ function theme_options_do_page() {
 				*/
 				?>
 
+				<tr><td><h3>Header</h3></td></tr>
+
+				<tr valign="top"><th scope="row"><?php _e( 'Favicon' ); ?></th>
+					<td>
+						<input id="comienzo_theme_options[faviconlocation]" class="regular-text" type="text" name="comienzo_theme_options[faviconlocation]" value="<?php esc_attr_e( $options['faviconlocation'] ); ?>" />
+						<label class="description" for="comienzo_theme_options[faviconlocation]"><?php _e( 'Enter the Full URL of your Favicon' ); ?></label>
+					</td>
+				</tr>
+
 				<tr valign="top"><th scope="row"><?php _e( 'A checkbox' ); ?></th>
 					<td>
 						<input id="comienzo_theme_options[option1]" name="comienzo_theme_options[option1]" type="checkbox" value="1" <?php checked( '1', $options['option1'] ); ?> />
@@ -206,6 +215,7 @@ function theme_options_validate( $input ) {
 
 	// Say our text option must be safe text with no HTML tags
 	$input['sometext'] = wp_filter_nohtml_kses( $input['sometext'] );
+	$input['faviconlocation'] = wp_filter_nohtml_kses( $input['faviconlocation'] );
 
 	// Our select option must actually be in our array of select options
 	if ( ! array_key_exists( $input['selectinput'], $select_options ) )
