@@ -143,7 +143,7 @@ function theme_options_do_page() {
 				?>
 				<tr valign="top"><th scope="row"><?php _e( 'Some text' ); ?></th>
 					<td>
-						<input id="comienzo_theme_options[sometext]" class="regular-text" type="text" name="comienzo_theme_options[sometext]" value="<?php esc_attr_e( $options['sometext'] ); ?>" />
+						<input id="comienzo_theme_options[sometext]" class="regular-text" type="text" name="comienzo_theme_options[sometext]" value="<?php if( isset( $options['sometext'] )) { esc_attr_e( $options['sometext'] ); } else { echo 'your default value'; } ?>" />
 						<label class="description" for="comienzo_theme_options[sometext]"><?php _e( 'Sample text input' ); ?></label>
 					</td>
 				</tr>
@@ -212,7 +212,7 @@ function theme_options_do_page() {
 				?>
 				<tr valign="top"><th scope="row"><?php _e( 'A textbox' ); ?></th>
 					<td>
-						<textarea id="comienzo_theme_options[sometextarea]" class="large-text" cols="50" rows="10" name="comienzo_theme_options[sometextarea]"><?php echo stripslashes( $options['sometextarea'] ); ?></textarea>
+						<textarea id="comienzo_theme_options[sometextarea]" class="large-text" cols="50" rows="10" name="comienzo_theme_options[sometextarea]"><?php if( isset( $options['sometextarea'] )) { echo stripslashes( $options['sometextarea'] ); } ?></textarea>
 						<label class="description" for="comienzo_theme_options[sometextarea]"><?php _e( 'Sample text box' ); ?></label>
 					</td>
 				</tr>
