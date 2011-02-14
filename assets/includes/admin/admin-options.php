@@ -80,8 +80,8 @@ function theme_options_do_page() {
 		<?php endif; ?>
 
 		<form method="post" action="options.php">
-			<?php settings_fields( 'sample_options' ); ?>
-			<?php $options = get_option( 'sample_theme_options' ); ?>
+			<?php settings_fields( 'comienzo_options' ); ?>
+			<?php $options = get_option( 'comienzo_theme_options' ); ?>
 
 			<table class="form-table">
 
@@ -92,8 +92,8 @@ function theme_options_do_page() {
 				?>
 				<tr valign="top"><th scope="row"><?php _e( 'A checkbox' ); ?></th>
 					<td>
-						<input id="sample_theme_options[option1]" name="sample_theme_options[option1]" type="checkbox" value="1" <?php checked( '1', $options['option1'] ); ?> />
-						<label class="description" for="sample_theme_options[option1]"><?php _e( 'Sample checkbox' ); ?></label>
+						<input id="comienzo_theme_options[option1]" name="comienzo_theme_options[option1]" type="checkbox" value="1" <?php checked( '1', $options['option1'] ); ?> />
+						<label class="description" for="comienzo_theme_options[option1]"><?php _e( 'Sample checkbox' ); ?></label>
 					</td>
 				</tr>
 
@@ -104,8 +104,8 @@ function theme_options_do_page() {
 				?>
 				<tr valign="top"><th scope="row"><?php _e( 'Some text' ); ?></th>
 					<td>
-						<input id="sample_theme_options[sometext]" class="regular-text" type="text" name="sample_theme_options[sometext]" value="<?php esc_attr_e( $options['sometext'] ); ?>" />
-						<label class="description" for="sample_theme_options[sometext]"><?php _e( 'Sample text input' ); ?></label>
+						<input id="comienzo_theme_options[sometext]" class="regular-text" type="text" name="comienzo_theme_options[sometext]" value="<?php esc_attr_e( $options['sometext'] ); ?>" />
+						<label class="description" for="comienzo_theme_options[sometext]"><?php _e( 'Sample text input' ); ?></label>
 					</td>
 				</tr>
 
@@ -116,7 +116,7 @@ function theme_options_do_page() {
 				?>
 				<tr valign="top"><th scope="row"><?php _e( 'Select input' ); ?></th>
 					<td>
-						<select name="sample_theme_options[selectinput]">
+						<select name="comienzo_theme_options[selectinput]">
 							<?php
 								$selected = $options['selectinput'];
 								$p = '';
@@ -132,7 +132,7 @@ function theme_options_do_page() {
 								echo $p . $r;
 							?>
 						</select>
-						<label class="description" for="sample_theme_options[selectinput]"><?php _e( 'Sample select input' ); ?></label>
+						<label class="description" for="comienzo_theme_options[selectinput]"><?php _e( 'Sample select input' ); ?></label>
 					</td>
 				</tr>
 
@@ -158,7 +158,7 @@ function theme_options_do_page() {
 									}
 								}
 								?>
-								<label class="description"><input type="radio" name="sample_theme_options[radioinput]" value="<?php esc_attr_e( $option['value'] ); ?>" <?php echo $checked; ?> /> <?php echo $option['label']; ?></label><br />
+								<label class="description"><input type="radio" name="comienzo_theme_options[radioinput]" value="<?php esc_attr_e( $option['value'] ); ?>" <?php echo $checked; ?> /> <?php echo $option['label']; ?></label><br />
 								<?php
 							}
 						?>
@@ -173,8 +173,8 @@ function theme_options_do_page() {
 				?>
 				<tr valign="top"><th scope="row"><?php _e( 'A textbox' ); ?></th>
 					<td>
-						<textarea id="sample_theme_options[sometextarea]" class="large-text" cols="50" rows="10" name="sample_theme_options[sometextarea]"><?php echo stripslashes( $options['sometextarea'] ); ?></textarea>
-						<label class="description" for="sample_theme_options[sometextarea]"><?php _e( 'Sample text box' ); ?></label>
+						<textarea id="comienzo_theme_options[sometextarea]" class="large-text" cols="50" rows="10" name="comienzo_theme_options[sometextarea]"><?php echo stripslashes( $options['sometextarea'] ); ?></textarea>
+						<label class="description" for="comienzo_theme_options[sometextarea]"><?php _e( 'Sample text box' ); ?></label>
 					</td>
 				</tr>
 			</table>
