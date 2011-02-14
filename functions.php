@@ -1,10 +1,10 @@
 <?php
 // setup of admin options
-require_once (TEMPLATEPATH . '/assets/includes/admin/admin-options.php');
+require_once( TEMPLATEPATH . '/assets/includes/admin/admin-options.php' );
 // includes sidebars
-require_once (TEMPLATEPATH . '/assets/includes/functions/sidebars.php');
+require_once( TEMPLATEPATH . '/assets/includes/functions/sidebars.php' );
 // includes comment stuff
-require_once (TEMPLATEPATH . '/assets/includes/custom-comment-styles.php');
+require_once( TEMPLATEPATH . '/assets/includes/custom-comment-styles.php' );
 // includes JS
 require_once( TEMPLATEPATH . '/assets/includes/add-js.php');
 //fixing the_excerpt
