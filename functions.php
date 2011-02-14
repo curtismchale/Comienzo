@@ -1,10 +1,12 @@
 <?php
 // setup of admin options
-require_once (TEMPLATEPATH . '/assets/includes/admin/admin-options.php');
+require_once( TEMPLATEPATH . '/assets/includes/admin/admin-options.php' );
 // includes sidebars
-require_once (TEMPLATEPATH . '/assets/includes/functions/sidebars.php');
+require_once( TEMPLATEPATH . '/assets/includes/functions/sidebars.php' );
 // includes comment stuff
-require_once (TEMPLATEPATH . '/assets/includes/custom-comment-styles.php');
+require_once( TEMPLATEPATH . '/assets/includes/custom-comment-styles.php' );
+// includes JS
+require_once( TEMPLATEPATH . '/assets/includes/add-js.php');
 //fixing the_excerpt
 function improved_trim_excerpt($text) {
 	global $post;
@@ -27,33 +29,10 @@ function improved_trim_excerpt($text) {
 
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'improved_trim_excerpt');
-// Load jQuery from Google Code in footer
-function jQueryFooter() {
-    if (!is_admin()){
-        wp_deregister_script('jquery');
-        wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"), false, '1.4.3',true);
-        wp_enqueue_script('jquery');
-    }
-}
-add_action('init', 'jQueryFooter');
-function restatement_footer_scripts() {
-    if (!is_admin()){
-        $js='/assets/js/scripts.js';
-        wp_register_script('scripts', get_stylesheet_directory_uri().$js,array('jquery'),filemtime(STYLESHEETPATH.$js),true);
-        wp_print_scripts('scripts');
-    }
-}
-add_action('wp_footer', 'restatement_footer_scripts');
-// remove version number from jQuery
-add_filter('script_loader_src','restatement_scripts_unversion');
-function restatement_scripts_unversion($src) {
-    if( strpos($src,'ajax.googleapis.com') )
-        $src=remove_query_arg('ver', $src);
-    return $src;
-}
 /* === ADD THEME SUPPORT === */
     if( function_exists('add_theme_support')) add_theme_support('post-thumbnails');
     if( function_exists('add_theme_support')) add_theme_support('automatic-feed-links');
+    if( function_exists('add_theme_support')) add_theme_support('post-formats');
 // expand contact info
 function my_new_contactmethods( $contactmethods ) {
     // Add Twitter
