@@ -19,12 +19,21 @@
             ?>
         </title>
 
+        <?php
+
+            /* setting some page options */
+            $options = get_option('comienzo_theme_options');
+            $favicon = $options['faviconlocation'];
+            $facebook = $options['facebookimage'];
+
+        ?>
+
         <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
         <meta name="description" content="<?php bloginfo('description') ?>" />
 
-        <link rel="image_src" link="<?php get_stylesheet_directory_uri(); ?>/screenshot.png" />
+        <link rel="image_src" link="<?php if( $facebook != "" ) { echo $facebook; } else { echo get_stylesheet_directory_uri(); ?>/screenshot.png<?php } ?>" />
 
-        <link rel="icon" type="image/png" link="<?php get_stylesheet_directory_uri(); ?>/favicon.ico" />
+        <link rel="icon" type="image/png" link="<?php if( $favicon != "" ) { echo $favicon; } else { echo get_stylesheet_directory_uri(); ?>/favicon.ico<?php } ?>" />
 
         <?php if(is_search()) { ?>
             <meta name="robots" content="noindex, nofollow" />
