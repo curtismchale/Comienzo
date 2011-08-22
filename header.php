@@ -22,9 +22,9 @@
         <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
         <meta name="description" content="<?php bloginfo('description') ?>" />
 
-        <link rel="image_src" link="<?php get_stylesheet_directory_uri(); ?>/screenshot.png" />
+        <link rel="image_src" link="<?php echo get_stylesheet_directory_uri(); ?>/screenshot.png" />
 
-        <link rel="icon" type="image/png" link="<?php get_stylesheet_directory_uri(); ?>/favicon.ico" />
+        <link rel="icon" type="image/png" link="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
         <?php if(is_search()) { ?>
             <meta name="robots" content="noindex, nofollow" />
@@ -40,7 +40,7 @@
 
         <?php wp_head(); ?>
 
-        <link rel="stylesheet" type="text/css" href="<?php get_stylesheet_uri(); ?>" media="screen" />
+        <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" media="screen" />
 
         <!-- adding HTML5 support for IE -->
         <!--[if lt IE 9]>
