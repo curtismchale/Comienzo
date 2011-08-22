@@ -1,6 +1,6 @@
 <?php
 // includes sidebars
-locate_template( array('/assets/includes/functions/sidebars.php' ), true);
+locate_template( array('/assets/includes/add-widget-areas.php' ), true);
 // includes comment stuff
 locate_template( array('/assets/includes/custom-comment-styles.php' ), true);
 // includes JS
