@@ -1,106 +1,42 @@
 /* LAYOUT */
 /* ----------------------------------------- */
 
-/*
-
-    TODO: if you code editor supports it add them here
-
-*/
-
-/* Stock Wordpress Presentational items. Used to align images in posts and provide captions on images */
-    .aligncenter{display:block; margin:0 auto}
-    .alignleft{float:left }
-    .alignright{float:right }
-    .wp-caption{border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px;}
-    div.post div.wp-caption a:hover{background:none;} /* removes image hover backgrdom inherited from links */
-
 /* stock presentation items */
     .clear{clear:both;}
     .required, .error {color:red;}
     input[type=submit]{cursor:pointer;}
 
-/* typography */
-    body{font-family:Univers, Arial, Helvetica, sans-serif; font-size:11px;}
+/* === SITE WIDE === */
 
-/* stock styles on site */
-    /* headings */
+    /*** HEADINGS ***/
         h1{font-weight:bold; font-size:1.8em;}
         h2{font-weight:bold; font-size:1.6em;}
         h3{font-weight:bold; font-size:1.4em;}
         h4{font-size:1.2em;}
 
-/* main wrapper div inside the body tags */
-    #main-wrapper{}
+    /*** TYPOGRAPHY ***/
+        body{font-family:Univers, Arial, Helvetica, sans-serif; font-size:11px;}
 
-/* header */
-    #header{}
-        #header .blogheader{}
-        #header .bloginfo{}
+/* === HEADER === */
 
+/* === MENU === */
 
-/* main navigation */
-    .nav ul{list-style:none;}
-        .nav ul li{}
+/* === CONTENT === */
 
-/* comments */
-    h3#comments{}
+    /*** STICKY ***/
+    .sticky{}
 
-    .comment-form{list-style:none;}
+    /*** IMAGES AND CAPTIONS ***/
+        .aligncenter{display:block; margin:0 auto}
+        .alignleft{float:left }
+        .alignright{float:right }
 
-    .comment-allowed-tags{font-size:.8em;}
+        /* captions */
+        .wp-caption{border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px;}
+        .wp-caption-text{}
+        .gallery-caption{}
 
-        .comment-logged-in{}
+/*** COMMENTS ***/
+    .bypostauthor{}
 
-        .comment-date{}
-
-        .user-comments{}
-
-/* sidebars */
-    /* sidebar-one */
-        #sidebar-one{}
-    /* sidebar-two*/
-        #sidebar-two{}
-    /*sidebar-three*/
-        #sidebar-three{}
-
-/* footer */
-    .footer{margin:20px 5px;}
-    .copyright{font-size:.8em;}
-    .wordpress-info{display:none;}
-
-/* main site content area */
-    /* post */
-        .post ul, .post ol, .post dl{margin:10px 0 10px 20px;}
-            .post ul li{list-style-type: disc;}
-            .post ol li{list-style-type: decimal;}
-        .post dt{font-weight:bold;}
-        .post dd{margin:0 10px;}
-        .post blockquote{margin:10px 15px;}
-
-        .post-tags{}
-    /* post heading */
-        .post-heading{}
-        .date-published{}
-        .post-title{}
-        .post-author{}
-    /* next and previous links */
-        .next-previous-links{}
-        .next-previous-links li{}
-        .next-previous-links li a, .next-previous-links li a:visited{}
-        .next-previous-links li a:hover, .next-previous-links li a:active, .next-previous-links li a:focus{}
-
-/* page specific tags */
-    /* index.php */
-        #index{}
-    /* single.php */
-        #single{}
-    /* page.php */
-        #page{}
-    /* page-custom.php */
-        #page-custom{}
-    /* 404.php */
-        #four-o-four{}
-    /* archive */
-        #archive{}
-    /* archives */
-        #archives{}
+/* === FOOTER === */
