@@ -6,7 +6,7 @@ locate_template( array('/assets/includes/custom-comment-styles.php' ), true);
 // includes JS
 locate_template( array('/assets/includes/add-js.php'), true);
 //fixing the_excerpt
-function improved_trim_excerpt($text) {
+function sfn_improved_trim_excerpt($text) {
 	global $post;
 	if ( '' == $text ) {
 		$text = get_the_content('');
@@ -26,7 +26,7 @@ function improved_trim_excerpt($text) {
 }
 
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
-add_filter('get_the_excerpt', 'improved_trim_excerpt');
+add_filter('get_the_excerpt', 'sfn_improved_trim_excerpt');
 /* === ADD THEME SUPPORT === */
     if( function_exists('add_theme_support')) add_theme_support('post-thumbnails');
     if( function_exists('add_theme_support')) add_theme_support('automatic-feed-links');
