@@ -1,6 +1,4 @@
 <?php
-// setup of admin options
-require_once( TEMPLATEPATH . '/assets/includes/admin/admin-options.php' );
 // includes sidebars
 require_once( TEMPLATEPATH . '/assets/includes/functions/sidebars.php' );
 // includes comment stuff

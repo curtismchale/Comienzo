@@ -12,11 +12,6 @@
 
     <?php wp_footer(); ?>
 
-    <?php
-        // Display Analytics, etc. from admin menu
-        echo get_option('cmnzth_footer_scripts');
-    ?>
-
     </body>
 
 </html>

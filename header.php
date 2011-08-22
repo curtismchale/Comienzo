@@ -47,8 +47,6 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
-        <link rel="shortcut icon" href="<?php echo get_option('cmnzth_favicon'); ?>" />
-
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php echo get_option('cmnzth_rss_feed'); ?>" />
 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
