@@ -1,4 +1,6 @@
 <?php
+// TODO don't forget to change you're content width to suite your design
+if ( ! isset( $content_width ) ) $content_width = 900;
 // includes sidebars
 locate_template( array('/assets/includes/add-widget-areas.php' ), true);
 // includes comment stuff
