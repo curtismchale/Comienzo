@@ -30,18 +30,6 @@ add_filter('get_the_excerpt', 'sfn_improved_trim_excerpt');
 /* === ADD THEME SUPPORT === */
     if( function_exists('add_theme_support')) add_theme_support('post-thumbnails');
     if( function_exists('add_theme_support')) add_theme_support('automatic-feed-links');
-    if( function_exists('add_theme_support')) add_theme_support('post-formats');
-// expand contact info
-function my_new_contactmethods( $contactmethods ) {
-    // Add Twitter
-        $contactmethods['twitter'] = 'Twitter';
-    //add Facebook
-        $contactmethods['facebook'] = 'Facebook';
-    //add Linkedin
-        $contactmethods['linkedin'] = "Linkedin";
-    return $contactmethods;
-}
-add_filter('user_contactmethods','my_new_contactmethods',10,1);
 // kill things not needed in the WordPress head
 remove_action('wp_head', 'rsd_link'); // kill the RSD link
 remove_action('wp_head', 'wlwmanifest_link'); // kill the WLW link
