@@ -1,10 +1,10 @@
 <?php
 // includes sidebars
-require_once( TEMPLATEPATH . '/assets/includes/functions/sidebars.php' );
+locate_template( array('/assets/includes/functions/sidebars.php' ), true);
 // includes comment stuff
-require_once( TEMPLATEPATH . '/assets/includes/custom-comment-styles.php' );
+locate_template( array('/assets/includes/custom-comment-styles.php' ), true);
 // includes JS
-require_once( TEMPLATEPATH . '/assets/includes/add-js.php');
+locate_template( array('/assets/includes/add-js.php'), true);
 //fixing the_excerpt
 function improved_trim_excerpt($text) {
 	global $post;
