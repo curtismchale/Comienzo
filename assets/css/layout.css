@@ -30,6 +30,15 @@ input[type=submit]{cursor:pointer;}
 
 /* === CONTENT === */
 
+    /*** ARTICLE ***/
+    article{font-size:16px; line-height:1.5em;}
+    article p{margin:0 0 10px 0;}
+
+    article ul, article ol{margin:10px 0 10px 30px;}
+    article li{margin:8px 0;}
+
+    article blockquote{margin:15px 30px; padding:20px;} 
+
     /*** STICKY ***/
     .sticky{}
 
