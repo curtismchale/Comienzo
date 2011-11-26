@@ -1,3 +1,18 @@
+<?php
+/**
+ * Page template file
+ * 
+ * All pages in the site are rendered by default on this file.
+ * 
+ * @package Comienzo
+ * @copyright Copyright (C) 2011 Curtis McHale
+ * @license http://www.gnu.org/copyleft/gpl.html GPL
+ * 
+ * @since 1.0
+ * 
+ * TODO clean up the indentation here
+ */
+?>
 <?php get_header(); ?>
 
     <div id="page">

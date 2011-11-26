@@ -1,3 +1,16 @@
+<?php
+/**
+ * Footer template file
+ *  
+ * The default footer for the theme. Is called by get_footer in other template files
+ * 
+ * @package Comienzo
+ * @copyright Copyright (C) 2011 Curtis McHale
+ * @license http://www.gnu.org/copyleft/gpl.html GPL
+ * 
+ * @since 1.0
+ */
+?>
 <div class="clear"></div>
             </div><!-- /#content -->
 

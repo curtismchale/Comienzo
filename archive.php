@@ -1,3 +1,16 @@
+<?php
+/**
+ * The archive page template
+ * 
+ * By default this deals with any taxonomies (tags, categories) that are requested from WordPress
+ * 
+ * @package Comienzo
+ * @copyright Copyright (C) 2011 Curtis McHale
+ * @license http://www.gnu.org/copyleft/gpl.html GPL
+ * 
+ * @since 1.0
+ */
+?>
 <?php get_header(); ?>
 
     <div id="archive">
@@ -27,25 +40,12 @@
 
             <?php while (have_posts()) : the_post(); ?>
 
-                <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-                   <div class="post-heading">
-                            <time class="date-published"><?php the_time( get_option('date_format') ); ?></time>
-                               <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                               <p class="post-author">by <?php the_author_posts_link(); ?></p>
-                           </div><!-- /.post-heading -->
-
-                           <div class="post-content">
-                               <?php the_content('Read the rest of this entry &raquo;'); ?>
-                           </div><!-- /.post-content -->
-
-                               <p class="post-tags"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', '); ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
-
-                       </article><!-- /post_class(); -->
+              <?php get_template_part( 'loop', 'blog' ); ?>
 
             <?php endwhile; ?>
 
             <!-- includes next previous links or post level nav -->
+            <!-- TODO locate_template -->
             <?php get_template_part( 'assets/includes/post-navigation' ); ?>
 
         <?php else : ?>
