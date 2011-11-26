@@ -1,3 +1,16 @@
+<?php
+/**
+ * Default template file
+ * 
+ * All of WordPress defaults back to index.php. This is the main blog page.
+ * 
+ * @package Comienzo
+ * @copyright Copyright (C) 2011 Curtis McHale
+ * @license http://www.gnu.org/copyleft/gpl.html GPL
+ * 
+ * @since 1.0
+ */
+?>
 <?php get_header(); ?>
 
     <div id="index">

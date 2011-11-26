@@ -1,3 +1,16 @@
+<?php
+/**
+ * Generic Loop
+ * 
+ * This is the generic loop file for the site. It serves single.php search.php and index.php. Some conditioanls are included to accommodate the different template files
+ * 
+ * @package Comienzo
+ * @copyright Copyright (C) 2011 Curtis McHale
+ * @license http://www.gnu.org/copyleft/gpl.html GPL
+ * 
+ * @since 2.0
+ */
+?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <div class="post-heading">
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>

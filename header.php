@@ -1,3 +1,16 @@
+<?php
+/**
+ * Header file
+ * 
+ * Default header file for the theme. Rendered by get_header.php
+ * 
+ * @package Comienzo
+ * @copyright Copyright (C) 2011 Curtis McHale
+ * @license http://www.gnu.org/copyleft/gpl.html GPL
+ * 
+ * @since 2.0
+ */
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 

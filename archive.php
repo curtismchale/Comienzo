@@ -1,3 +1,16 @@
+<?php
+/**
+ * The archive page template
+ * 
+ * By default this deals with any taxonomies (tags, categories) that are requested from WordPress
+ * 
+ * @package Comienzo
+ * @copyright Copyright (C) 2011 Curtis McHale
+ * @license http://www.gnu.org/copyleft/gpl.html GPL
+ * 
+ * @since 1.0
+ */
+?>
 <?php get_header(); ?>
 
     <div id="archive">

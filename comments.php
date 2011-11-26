@@ -4,12 +4,12 @@
  *
  * The area of the page that contains both current comments
  * and the comment form.  The actual display of comments is
- * handled by a callback to twentyten_comment which is
+ * handled by a callback to comienzo_comment which is
  * located in the functions.php file.
  *
  * @package WordPress
- * @subpackage Starkers
- * @since Starkers 3.0
+ * @subpackage Comienzo
+ * @since 2.0
  */
 ?>
 

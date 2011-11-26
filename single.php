@@ -1,3 +1,16 @@
+<?php
+/**
+ * Displays the single blog posts
+ * 
+ * By defaults WordPress will display any request for a single blog post to this tempalte file.
+ * 
+ * @package Comienzo
+ * @copyright Copyright (C) 2011 Curtis McHale
+ * @license http://www.gnu.org/copyleft/gpl.html GPL
+ * 
+ * @since 1.0
+ */
+?>
 <?php get_header(); ?>
 
     <div id="single">
@@ -12,7 +25,7 @@
                 <!-- TODO locate_template -->
                 <?php get_template_part( 'assets/includes/post-navigation' ); ?>
 
-                <?php endwhile; else: ?>
+            <?php endwhile; else: ?>
 
                     <p>Sorry, no posts matched your criteria.</p>
                     <?php get_search_form(); ?>
