@@ -5,7 +5,14 @@
         <time class="date-published"><?php the_time( get_option('date_format') ); ?></time>
     </div><!-- /.post-heading -->
 
-    <?php the_content('Read the rest of this entry &raquo;'); ?>
+    <?php
+
+    	if( is_search() || is_archive() ){
+    		the_excerpt();
+    	} else{ 
+	    	the_content('Read the rest of this entry &raquo;');
+	    }
+	?>
 
     <p class="post-tags"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', '); ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
 </article><!-- /post_class(); -->
