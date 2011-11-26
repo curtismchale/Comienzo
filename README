@@ -32,7 +32,9 @@ Revision Hx
 
 Version 2
     
-    Added better admin options panel
+    Updated to use get_template_part
+    Better documentation according to the PHP docblock standard on template files
+    Abstracted loop so less code duplication
 
 Version 1
 
