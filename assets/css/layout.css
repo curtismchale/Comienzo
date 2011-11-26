@@ -9,10 +9,11 @@
 /* === SITE WIDE === */
 
     /*** HEADINGS ***/
-        h1{font-weight:bold; font-size:1.8em;}
-        h2{font-weight:bold; font-size:1.6em;}
-        h3{font-weight:bold; font-size:1.4em;}
-        h4{font-size:1.2em;}
+        h1{font-weight:bold; font-size:1.8em; margin:0 0 25px 0;}
+        h2{font-weight:bold; font-size:1.6em; margin:0 0 20px 0;}
+        h3{font-weight:bold; font-size:1.4em; margin:0 0 15px 0;}
+        h4{font-size:1.2em; margin:0 0 10px 0;}
+        h5, h6{margin:0 0 8px 0;}
 
     /*** TYPOGRAPHY ***/
         body{font-family:Univers, Arial, Helvetica, sans-serif; font-size:11px;}
