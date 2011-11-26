@@ -43,9 +43,9 @@ input[type=submit]{cursor:pointer;}
     .sticky{}
 
     /*** IMAGES AND CAPTIONS ***/
-    .aligncenter{display:block; margin:0 auto}
-    .alignleft{float:left }
-    .alignright{float:right }
+    .aligncenter{display:block; margin:0 auto;}
+    .alignleft{float:left;}
+    .alignright{float:right;}
 
         /* captions */
         .wp-caption{border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px;}
@@ -54,5 +54,16 @@ input[type=submit]{cursor:pointer;}
 
 /* === COMMENTS === */
 .bypostauthor{}
+
+    /*** USER COMMENTS ***/
+    .comment-body{font-size:16px; line-height:1.5em;}
+    .comment-body p{margin:0 0 10px 0;}
+
+    .comment-body ul, .comment-body ol{margin:10px 0 10px 30px;}
+    .comment-body li{margin:8px 0;}
+
+    .comment-body blockquote{margin:15px 30px; padding:20px;} 
+
+
 
 /* === FOOTER === */
