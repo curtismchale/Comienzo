@@ -1,13 +1,13 @@
 <?php
 /**
  * Header file
- * 
+ *
  * Default header file for the theme. Rendered by get_header.php
- * 
+ *
  * @package Comienzo
  * @copyright Copyright (C) 2011 Curtis McHale
  * @license http://www.gnu.org/copyleft/gpl.html GPL
- * 
+ *
  * @since 2.0
  */
 ?>
@@ -46,6 +46,7 @@
         <?php
         	/* We add some JavaScript to pages with the comment form
         	 * to support sites with threaded comments (when in use).
+           * TODO enqueue this properly
         	 */
         	if ( is_singular() && get_option( 'thread_comments' ) )
         		wp_enqueue_script( 'comment-reply' );
