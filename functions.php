@@ -1,5 +1,10 @@
 <?php
-// TODO don't forget to change you're content width to suite your design
+/**
+ * Place any TODO notes for your theme here so you don't forget
+ *
+ * @todo set $content_width to match the theme
+ * @todo change the screenshot to match the theme
+ */
 if ( ! isset( $content_width ) ) $content_width = 900;
 // includes sidebars
 locate_template( array('/assets/includes/add-widget-areas.php' ), true);
