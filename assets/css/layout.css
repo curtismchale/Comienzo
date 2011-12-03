@@ -37,7 +37,7 @@ input[type=submit]{cursor:pointer;}
     article ul, article ol{margin:10px 0 10px 30px;}
     article li{margin:8px 0;}
 
-    article blockquote{margin:15px 30px; padding:20px;} 
+    article blockquote{margin:15px 30px; padding:20px;}
 
     /*** STICKY ***/
     .sticky{}
@@ -62,7 +62,7 @@ input[type=submit]{cursor:pointer;}
     .comment-body ul, .comment-body ol{margin:10px 0 10px 30px;}
     .comment-body li{margin:8px 0;}
 
-    .comment-body blockquote{margin:15px 30px; padding:20px;} 
+    .comment-body blockquote{margin:15px 30px; padding:20px;}
 
 
 
