@@ -66,4 +66,43 @@ remove_filter( 'the_title', 'capital_P_dangit' );
 remove_filter( 'comment_text', 'capital_P_dangit' );
 // security tweaks
 add_filter('login_errors',create_function('$a', "return null;")); // remove login error notes
+
+/**
+ * Adds page slug to body_class
+ *
+ * Adds the page slug to the output of body_class on the HTML
+ * body of our site.
+ *
+ * @since 2.1
+ *
+ * @param $classes  array   required  The array of classes that is already being applied to body_class
+ *
+ * @return $classes array   The modified classes to be applied to body_class
+ *
+ * @global $wp_query
+ *
+ * @uses is_404
+ * @uses is_page
+ * @uses get_page
+ * @uses sanitize_title
+ */
+function sfn_body_classes($classes, $class='') {
+    global $wp_query;
+    // detecting the 404 page since the $post_id won't be valid
+    // if we're on a 404 page and we'll get a debug error
+    if( !is_404() ){
+        $post_id = $wp_query->post->ID;
+        if(is_page($post_id )){
+            $page = get_page($post_id);
+            //check for parent
+            if($page->post_parent>0){
+                $parent = get_page($page->post_parent);
+                $classes[] = 'page-'.sanitize_title($parent->post_title);
+            }
+            $classes[] = 'page-'.sanitize_title($page->post_title);
+        }
+    }// ends check for 404 page
+  return $classes;// return the $classes array
+}
+add_filter('body_class','sfn_body_classes');
 ?>
