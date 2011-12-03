@@ -1,17 +1,16 @@
 Comienzo
 
-Comienzo was started off of Elliot Jay Stocks fabulous theme Starkers. I continually found myself adding items to WP themes I built so decided to build a continually evolving base them for WP. Comienzo includes many classes and id's that I use to build a Wordpress theme. I have found that generally I don't have to touch the HTML to implement a design.
+Comienzo is intended to be a blank starting theme that follows WordPress best practices. There are few/no styles and lots of empty classes that you should fill in. There are a few helper functions that I use regularly but by and large it's simply a clean starting place for building solid WordPress themes.
 
 I'm happy to take suggestions via tickets submitted to Github. I won't be responding to any emails or comments on blog posts regarding this theme. Just keeps things centralized and tracked for me.
 
 Thanks for checking this out and good luck.
 
-View the theme at http://comienzo.curtisdev.ca though it's really not much to look at.
-
 ----------
 THANKS
 
 Many thanks to @iKitty for help with the name (I don't speak Spanish).
+Thanks to Elliot Jay Stocks who built Starkers which I used for a long time and was the base for this theme many moons ago.
 
 ----------
 INSTALLATION
@@ -21,7 +20,7 @@ To install upload Comienzo to your /wp-content/themes directory. Change theme fo
 ----------
 License
 
-You are free to use this theme for any personal or commercial project with no attribution. You are free to modify the theme for clients or stock themes and distribute the derivative work. Do not distribute the theme as is as your own. Link back to original post at [link] if you would like to 'distribute' the theme.
+Comienzo is a GPL theme which means you can use it as you wish without restriction. Enjoy.
 
 Of course a link to my site is always appreciated.
 
@@ -30,17 +29,29 @@ Of course a link to my site is always appreciated.
 ----------
 Revision Hx
 
+Version 2.1
+
+  Cleaned up indentation and whitespace
+  added new function that adds page slug to body_class
+  improved function documentation
+  add better error message to 404 page including link to site admin email
+  using locate_template instead of get_template_part
+  fixed pages so they don't have date and author information
+  updated README information to reflect the current state of the theme
+  added license requirements from the theme review guidelines - http://codex.wordpress.org/Theme_Review#Licensing
+
 Version 2
-    
-    Updated to use get_template_part
-    Better documentation according to the PHP docblock standard on template files
-    Abstracted loop so less code duplication
+
+  Updated to use get_template_part
+  Better documentation according to the PHP docblock standard on template files
+  Abstracted loop so less code duplication
+  Brought a bunch of stuff up to WordPress best practice
 
 Version 1
 
 	Features
-	
-    HTML 5 valid
+
+  HTML 5 valid
 	CSS 2.1 valid
 	Thumbnails for Wordpress 2.9 turned on in function file automatically if supported so older versions don't break.
 	jQuery 1.4.0 loaded from google code library through the functions file
