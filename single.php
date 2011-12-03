@@ -22,8 +22,7 @@
       <?php get_template_part( 'loop', 'blog' ); ?>
 
       <!-- includes next previous links or post level nav -->
-      <!-- TODO locate_template -->
-      <?php get_template_part( 'assets/includes/post-navigation' ); ?>
+      <?php locate_template( array( 'assets/includes/post-navigation.php' ), true ); ?>
 
     <?php endwhile; else: ?>
 
