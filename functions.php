@@ -47,8 +47,9 @@ remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'sfn_improved_trim_excerpt');
 
 /* === ADD THEME SUPPORT === */
-    if( function_exists('add_theme_support')) add_theme_support('post-thumbnails');
-    if( function_exists('add_theme_support')) add_theme_support('automatic-feed-links');
+add_theme_support('post-thumbnails');
+add_theme_support('automatic-feed-links');
+
 // kill things not needed in the WordPress head
 remove_action('wp_head', 'rsd_link'); // kill the RSD link
 remove_action('wp_head', 'wlwmanifest_link'); // kill the WLW link
