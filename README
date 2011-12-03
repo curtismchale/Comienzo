@@ -29,6 +29,17 @@ Of course a link to my site is always appreciated.
 ----------
 Revision Hx
 
+Version 2.1
+
+  Cleaned up indentation and whitespace
+  added new function that adds page slug to body_class
+  improved function documentation
+  add better error message to 404 page including link to site admin email
+  using locate_template instead of get_template_part
+  fixed pages so they don't have date and author information
+  updated README information to reflect the current state of the theme
+  added license requirements from the theme review guidelines - http://codex.wordpress.org/Theme_Review#Licensing
+
 Version 2
 
   Brought a bunch of stuff up to WordPress best practice
@@ -36,8 +47,8 @@ Version 2
 Version 1
 
 	Features
-	
-    HTML 5 valid
+
+  HTML 5 valid
 	CSS 2.1 valid
 	Thumbnails for Wordpress 2.9 turned on in function file automatically if supported so older versions don't break.
 	jQuery 1.4.0 loaded from google code library through the functions file
