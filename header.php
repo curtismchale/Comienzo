@@ -43,15 +43,6 @@
             <meta name="robots" content="noindex, nofollow" />
         <?php }?>
 
-        <?php
-        	/* We add some JavaScript to pages with the comment form
-        	 * to support sites with threaded comments (when in use).
-           * TODO enqueue this properly
-        	 */
-        	if ( is_singular() && get_option( 'thread_comments' ) )
-        		wp_enqueue_script( 'comment-reply' );
-    	?>
-
         <?php wp_head(); ?>
 
         <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" media="screen" />
