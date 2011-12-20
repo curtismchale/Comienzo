@@ -29,7 +29,7 @@ locate_template( array('/assets/includes/add-js.php'), true);
  *
  * @uses get_the_content
  */
-function sfn_improved_trim_excerpt( $text ) {
+function com_improved_trim_excerpt( $text ) {
 	global $post;
 	if ( '' == $text ) {
 		$text = get_the_content('');
@@ -49,7 +49,7 @@ function sfn_improved_trim_excerpt( $text ) {
 }
 
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
-add_filter('get_the_excerpt', 'sfn_improved_trim_excerpt');
+add_filter('get_the_excerpt', 'com_improved_trim_excerpt');
 
 /* === ADD THEME SUPPORT === */
 add_theme_support('post-thumbnails');
@@ -91,7 +91,7 @@ add_filter('login_errors',create_function('$a', "return null;")); // remove logi
  * @uses get_page
  * @uses sanitize_title
  */
-function sfn_body_classes($classes, $class='') {
+function com_body_classes($classes, $class='') {
     global $wp_query;
     // detecting the 404 page since the $post_id won't be valid
     // if we're on a 404 page and we'll get a debug error
@@ -109,5 +109,5 @@ function sfn_body_classes($classes, $class='') {
     }// ends check for 404 page
   return $classes;// return the $classes array
 }
-add_filter('body_class','sfn_body_classes');
+add_filter('body_class','com_body_classes');
 ?>

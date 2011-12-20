@@ -4,13 +4,13 @@
      * Template for comments and pingbacks.
      *
      * To override this walker in a child theme without modifying the comments template
-     * simply create your own comienzo_comment, and that function will be used instead.
+     * simply create your own com_comment, and that function will be used instead.
      *
      * Used as a callback by wp_list_comments() for displaying the comments.
      *
      * @since Comienzo 2.0
      */
-    function comienzo_comment( $comment, $args, $depth ) {
+    function com_comment( $comment, $args, $depth ) {
     	$GLOBALS['comment'] = $comment;
     	switch ( $comment->comment_type ) :
     		case '' :
