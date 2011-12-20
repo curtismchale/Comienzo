@@ -30,9 +30,10 @@ Of course a link to my site is always appreciated.
 Revision Hx
 
 Version 2.2
-  
+
   Enqueue JS the right way including comment JS
   Refactor the JS in scripts so it's done the right way instead of just leaving it for so long
+  Changed sandboxing prefix to match theme instead of company name
 
 Version 2.1
 
