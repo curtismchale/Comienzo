@@ -10,5 +10,9 @@ Author URI: http://www.curtismchale.ca
 Tags: clean, basic, structure, starting, base
 */
 
-@import "assets/css/reset.css";
-@import "assets/css/layout.css";
+@import "assets/css/compile.css";
+
+/**
+ * Any extra CSS not in LESS can go here if you need it.
+ * Put it below the comments.
+ */
