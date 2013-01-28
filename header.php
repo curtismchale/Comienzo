@@ -60,7 +60,7 @@
 
             <nav>
                 <ul>
-                    <?php wp_list_pages('title_li='); ?>
+                    <?php wp_nav_menu(); ?>
                 </ul>
             </nav><!-- /nav -->
 
