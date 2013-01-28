@@ -50,11 +50,11 @@
 
         <header>
 
-            <?php if(is_front_page()) : ?>
-                <h1 class="blogheader"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-            <?php else : ?>
-                <h2 class="blogheader"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h2>
-            <?php endif;  ?>
+            <?php if ( is_front_page() ) { ?>
+                <h1 class="blogheader"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+            <?php } else { ?>
+                <h2 class="blogheader"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h2>
+            <?php } // is_front_page  ?>
 
             <p class="bloginfo"><?php bloginfo('description'); ?></p>
 
