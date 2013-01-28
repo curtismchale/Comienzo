@@ -55,23 +55,6 @@ add_filter('get_the_excerpt', 'com_improved_trim_excerpt');
 add_theme_support('post-thumbnails');
 add_theme_support('automatic-feed-links');
 
-// kill things not needed in the WordPress head
-remove_action('wp_head', 'rsd_link'); // kill the RSD link
-remove_action('wp_head', 'wlwmanifest_link'); // kill the WLW link
-remove_action('wp_head', 'index_rel_link'); // kill the index link
-remove_action('wp_head', 'parent_post_rel_link', 10, 0); // kill the prev link
-remove_action('wp_head', 'start_post_rel_link', 10, 0); // kill the start link
-remove_action('wp_head', 'feed_links', 2); // kill post and comment feeds
-remove_action('wp_head', 'feed_links_extra', 3); // kill category, author, and other extra feeds
-remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // kill adjacent post links
-remove_action('wp_head', 'wp_generator'); // kill the wordpress version number
-// removing a really bad filter idea by Matt M
-remove_filter( 'the_content', 'capital_P_dangit' );
-remove_filter( 'the_title', 'capital_P_dangit' );
-remove_filter( 'comment_text', 'capital_P_dangit' );
-// security tweaks
-add_filter('login_errors',create_function('$a', "return null;")); // remove login error notes
-
 /**
  * Adds page slug to body_class
  *
