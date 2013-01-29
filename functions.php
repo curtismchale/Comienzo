@@ -55,42 +55,55 @@ add_filter('get_the_excerpt', 'com_improved_trim_excerpt');
 add_theme_support('post-thumbnails');
 add_theme_support('automatic-feed-links');
 
-/**
- * Adds page slug to body_class
- *
- * Adds the page slug to the output of body_class on the HTML
- * body of our site.
- *
- * @since 2.1
- *
- * @param $classes  array   required  The array of classes that is already being applied to body_class
- *
- * @return $classes array   The modified classes to be applied to body_class
- *
- * @global $wp_query
- *
- * @uses is_404
- * @uses is_page
- * @uses get_page
- * @uses sanitize_title
- */
-function com_body_classes($classes, $class='') {
-    global $wp_query;
-    // detecting the 404 page since the $post_id won't be valid
-    // if we're on a 404 page and we'll get a debug error
-    if( !is_404() ){
-        $post_id = $wp_query->post->ID;
-        if(is_page($post_id )){
-            $page = get_page($post_id);
-            //check for parent
-            if($page->post_parent>0){
-                $parent = get_page($page->post_parent);
-                $classes[] = 'page-'.sanitize_title($parent->post_title);
-            }
-            $classes[] = 'page-'.sanitize_title($page->post_title);
-        }
-    }// ends check for 404 page
-  return $classes;// return the $classes array
-}
-add_filter('body_class','com_body_classes');
-?>
+
+
+class Comienzo{
+
+	function __construct(){
+		add_filter( 'body_class', array( $this, 'body_classes' ) );
+	} // construct
+
+	/**
+	 * Adds page slug to body_class
+	 *
+	 * Adds the page slug to the output of body_class on the HTML
+	 * body of our site.
+	 *
+	 * @since 2.1
+	 *
+	 * @param $classes  array   required  The array of classes that is already being applied to body_class
+	 *
+	 * @return $classes array   The modified classes to be applied to body_class
+	 *
+	 * @global $wp_query
+	 *
+	 * @uses is_404()           Conditional returns true if on the 404 page
+	 * @uses is_page()          Conditional returns true if on a page
+	 * @uses get_page()         Gets the page object
+	 * @uses sanitize_title()   Makes sure we're outputing safeness
+	 *
+	 * @todo get_page it deprecated and should be killed
+	 * @todo really this whole thing needs an overhaul
+	 */
+	function body_classes($classes, $class='') {
+		global $wp_query;
+		// detecting the 404 page since the $post_id won't be valid
+		// if we're on a 404 page and we'll get a debug error
+		if( !is_404() ){
+			$post_id = $wp_query->post->ID;
+			if(is_page($post_id )){
+				$page = get_page($post_id);
+				//check for parent
+				if($page->post_parent>0){
+					$parent = get_page($page->post_parent);
+					$classes[] = 'page-'.sanitize_title($parent->post_title);
+				}
+				$classes[] = 'page-'.sanitize_title($page->post_title);
+			}
+		}// ends check for 404 page
+	  return $classes;// return the $classes array
+	}
+
+} // Comienzo
+
+$com = new Comienzo();
