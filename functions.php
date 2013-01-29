@@ -13,44 +13,6 @@ locate_template( array('/assets/includes/custom-comment-styles.php' ), true);
 // includes JS
 locate_template( array('/assets/includes/add-js.php'), true);
 
-/**
- * Improves the excerpt IMO
- *
- * Lets more HTML through the excerpt to provide what clients
- * typically expect to see in their site functionality. You can
- * change the lenght of the excerpt by working with the $excerpt_length
- * variable.
- *
- * @since 1.0
- *
- * @param $text   string  required    The text that we make the excerpt from
- *
- * @return $text  string  Our newly formatted text string for the_excerpt
- *
- * @uses get_the_content
- */
-function com_improved_trim_excerpt( $text ) {
-	global $post;
-	if ( '' == $text ) {
-		$text = get_the_content('');
-		$text = apply_filters('the_content', $text);
-		$text = str_replace(']]>', ']]&gt;', $text);
-		$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-		$text = strip_tags($text, '<p>,<ul>,<li>,<ol>');
-		$excerpt_length = 55;
-		$words = explode(' ', $text, $excerpt_length + 1);
-		if (count($words)> $excerpt_length) {
-			array_pop($words);
-			array_push($words, '[...]');
-			$text = implode(' ', $words);
-		}
-	}
-	return $text;
-}
-
-remove_filter('get_the_excerpt', 'wp_trim_excerpt');
-add_filter('get_the_excerpt', 'com_improved_trim_excerpt');
-
 /* === ADD THEME SUPPORT === */
 add_theme_support('post-thumbnails');
 add_theme_support('automatic-feed-links');
@@ -61,7 +23,50 @@ class Comienzo{
 
 	function __construct(){
 		add_filter( 'body_class', array( $this, 'body_classes' ) );
+
+		// excerpt stuff
+		remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
+		add_filter( 'get_the_excerpt', array( $this, 'improved_trim_excerpt' ) );
+
 	} // construct
+
+	/**
+	 * Improves the excerpt IMO
+	 *
+	 * Lets more HTML through the excerpt to provide what clients
+	 * typically expect to see in their site functionality. You can
+	 * change the lenght of the excerpt by working with the $excerpt_length
+	 * variable.
+	 *
+	 * @since 1.0
+	 *
+	 * @param $text   string  required    The text that we make the excerpt from
+	 *
+	 * @return $text  string  Our newly formatted text string for the_excerpt
+	 *
+	 * @uses get_the_content
+	 *
+	 * @todo doubt I need the $post global
+	 * @todo give this a whole rethink in lite of the balanced tags one we used with 10up
+	 */
+	function improved_trim_excerpt( $text ) {
+		global $post;
+		if ( '' == $text ) {
+			$text = get_the_content('');
+			$text = apply_filters('the_content', $text);
+			$text = str_replace(']]>', ']]&gt;', $text);
+			$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+			$text = strip_tags($text, '<p>,<ul>,<li>,<ol>');
+			$excerpt_length = 55;
+			$words = explode(' ', $text, $excerpt_length + 1);
+			if (count($words)> $excerpt_length) {
+				array_pop($words);
+				array_push($words, '[...]');
+				$text = implode(' ', $words);
+			}
+		}
+		return $text;
+	} // improved_trim_excerpt
 
 	/**
 	 * Adds page slug to body_class
@@ -102,7 +107,7 @@ class Comienzo{
 			}
 		}// ends check for 404 page
 	  return $classes;// return the $classes array
-	}
+	} // body_classes
 
 } // Comienzo
 
