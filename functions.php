@@ -6,8 +6,7 @@
  * @todo change the screenshot to match the theme
  */
 if ( ! isset( $content_width ) ) $content_width = 900;
-// includes sidebars
-locate_template( array('/assets/includes/add-widget-areas.php' ), true);
+
 // includes comment stuff
 locate_template( array('/assets/includes/custom-comment-styles.php' ), true);
 // includes JS
@@ -24,11 +23,38 @@ class Comienzo{
 	function __construct(){
 		add_filter( 'body_class', array( $this, 'body_classes' ) );
 
+		add_action( 'widgets_init', array( $this, 'widget_areas' ) );
+
 		// excerpt stuff
 		remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 		add_filter( 'get_the_excerpt', array( $this, 'improved_trim_excerpt' ) );
 
 	} // construct
+
+	/**
+	 * Registers the 'sidebars' (really they're widget areas people) for the site
+	 *
+	 * @since 1.0
+	 * @access public
+	 * @author SFNdesign, Curtis McHale
+	 *
+	 * @uses register_sidebar()         Registers the sidebare/widget area in WordPress
+	 */
+	public function widget_areas() {
+
+		register_sidebar( array(
+			'id'            => 'sidebar',
+			'name'          => 'sidebar',
+			'description'   => 'add description of the sidebar into functions file',
+			'before_widget' => '<li id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</li>',
+			'before_title'  => '<h2 class="widgettitle">',
+			'after_title'   => '</h2>',
+		));
+
+	  // repeat register sidebar to add more sidebars
+
+	} // widget_areas
 
 	/**
 	 * Improves the excerpt IMO
