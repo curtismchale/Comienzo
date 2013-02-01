@@ -9,8 +9,6 @@ if ( ! isset( $content_width ) ) $content_width = 900;
 
 // includes comment stuff
 locate_template( array('/assets/includes/custom-comment-styles.php' ), true);
-// includes JS
-locate_template( array('/assets/includes/add-js.php'), true);
 
 /* === ADD THEME SUPPORT === */
 add_theme_support('post-thumbnails');
@@ -48,6 +46,10 @@ class Comienzo{
 		  // registering our scripts first
 		  wp_enqueue_script( 'jqueryvalidate', get_template_directory_uri() . '/assets/js/jquery.validate.min.js', array( 'jquery' ), '1.0', true );
 		  wp_enqueue_script( 'comthemescripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '1.0', true );
+
+		  if( is_single() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		  } // single && get_option
 
 	} // add_js
 
