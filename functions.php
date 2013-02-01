@@ -25,11 +25,31 @@ class Comienzo{
 
 		add_action( 'widgets_init', array( $this, 'widget_areas' ) );
 
+		// javascript
+		add_action( 'wp_enqueue_scripts', array( $this, 'add_js' ) );
+
 		// excerpt stuff
 		remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 		add_filter( 'get_the_excerpt', array( $this, 'improved_trim_excerpt' ) );
 
 	} // construct
+
+	/**
+	 * Enqueues our theme scripts
+	 *
+	 * @since 1.0
+	 * @author SFNdesign, Curtis McHale
+	 * @access public
+	 *
+	 * @uses wp_enqueue_scripts()       Sets up JS the 'WordPress' way
+	 */
+	public function add_js(){
+
+		  // registering our scripts first
+		  wp_enqueue_script( 'jqueryvalidate', get_template_directory_uri() . '/assets/js/jquery.validate.min.js', array( 'jquery' ), '1.0', true );
+		  wp_enqueue_script( 'comthemescripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '1.0', true );
+
+	} // add_js
 
 	/**
 	 * Registers the 'sidebars' (really they're widget areas people) for the site
