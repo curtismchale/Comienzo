@@ -14,8 +14,11 @@ locate_template( array('/assets/includes/custom-comment-styles.php' ), true);
 add_theme_support('post-thumbnails');
 add_theme_support('automatic-feed-links');
 
-
-
+/**
+ * This is the main CLASS for adding functions to our theme
+ *
+ * @since 2.2.1 - added the class instead of functional stuff
+ */
 class Comienzo{
 
 	function __construct(){
