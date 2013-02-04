@@ -163,3 +163,42 @@ class Comienzo{
 } // Comienzo
 
 $com = new Comienzo();
+
+/* === Template Tags === */
+
+/**
+ * Builds out a smarter Archive title
+ *
+ * @since 1.0
+ * @author SFNdesign, Curtis McHale
+ *
+ * @uses is_category()          Returns true if we are on a category
+ * @uses single_cat_title()     Prints out the title for a single category
+ * @uses is_tag()               Returns true if on a tag archive page
+ * @uses single_tag_title()     Prints out the name of the tage
+ * @uses the_time()             Returns the time
+ * @uses is_day()               Returns true if on a day archive page
+ * @uses is_month()             Returns true if on a month archive page
+ * @uses is_year()              Returns true if on a year archive page
+ * @uses is_author()            Returns true if you are on an author archive page
+ */
+function com_archive_title(){ ?>
+
+	<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
+	<?php /* If this is a category archive */ if (is_category()) { ?>
+	<h1>Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h1>
+	<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
+	<h1>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h1>
+	<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
+	<h1>Archive for <?php the_time( get_option('date_format') ); ?></h1>
+	<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
+	<h1>Archive for <?php the_time('F, Y'); ?></h1>
+	<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
+	<h1>Archive for <?php the_time('Y'); ?></h1>
+	<?php /* If this is an author archive */ } elseif (is_author()) { ?>
+	<h1>Author Archive</h1>
+	<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
+	<h1>Blog Archives</h1>
+	<?php }
+
+} // com_archive_title
