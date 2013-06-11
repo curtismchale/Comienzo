@@ -45,8 +45,8 @@
 						$current_user = wp_get_current_user();
 
 						wptt_log_error(
-							'404 Page',
-							'Someone hit the 404 page',
+							'Archive Page',
+							'Someone hit the archive page with no content available',
 							array( 'user' => $current_user )
 						);
 
