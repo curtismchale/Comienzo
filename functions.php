@@ -91,17 +91,15 @@ class Comienzo{
 	 *
 	 * @since 1.0
 	 *
-	 * @param $text   string  required    The text that we make the excerpt from
+	 * @param string $text      required    The text that we make the excerpt from
 	 *
-	 * @return $text  string  Our newly formatted text string for the_excerpt
+	 * @return string $text     Our newly formatted text string for the_excerpt
 	 *
 	 * @uses get_the_content
 	 *
-	 * @todo doubt I need the $post global
 	 * @todo give this a whole rethink in lite of the balanced tags one we used with 10up
 	 */
 	function improved_trim_excerpt( $text ) {
-		global $post;
 		if ( '' == $text ) {
 			$text = get_the_content('');
 			$text = apply_filters('the_content', $text);
@@ -127,9 +125,10 @@ class Comienzo{
 	 *
 	 * @since 2.1
 	 *
-	 * @param $classes  array   required  The array of classes that is already being applied to body_class
+	 * @param array     $classes    required    The array of classes that is already being applied to body_class
+	 * @param string    $class      optional    Any string class fed in to the body_class function
 	 *
-	 * @return $classes array   The modified classes to be applied to body_class
+	 * @return array    $classes    The modified classes to be applied to body_class
 	 *
 	 * @global $wp_query
 	 *
