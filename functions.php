@@ -137,7 +137,6 @@ class Comienzo{
 	 * @uses get_page()         Gets the page object
 	 * @uses sanitize_title()   Makes sure we're outputing safeness
 	 *
-	 * @todo get_page it deprecated and should be killed
 	 * @todo really this whole thing needs an overhaul
 	 */
 	function body_classes($classes, $class='') {
@@ -147,10 +146,10 @@ class Comienzo{
 		if( !is_404() ){
 			$post_id = $wp_query->post->ID;
 			if(is_page($post_id )){
-				$page = get_page($post_id);
+				$page = get_post($post_id);
 				//check for parent
 				if($page->post_parent>0){
-					$parent = get_page($page->post_parent);
+					$parent = get_post($page->post_parent);
 					$classes[] = 'page-'.sanitize_title($parent->post_title);
 				}
 				$classes[] = 'page-'.sanitize_title($page->post_title);
