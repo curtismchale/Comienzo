@@ -1,0 +1,25 @@
+{
+  "name": "comienzo",
+  "version": "3.0.0",
+  "description": "Starting WP theme",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.11",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/curtismchale/Comienzo.git"
+  },
+  "author": "SFNdesgin, Curtis McHale",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/curtismchale/Comienzo/issues"
+  }
+}
