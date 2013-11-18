@@ -53,12 +53,19 @@ input[type=submit]{cursor:pointer;}
     .sticky{}
 
     /*** IMAGES AND CAPTIONS ***/
-    .aligncenter{display:block; margin:0 auto;}
-    .alignleft, .wp-caption.alignleft{float:left; margin-right:10px;}
-    .alignright, .wp-caption.alignright{float:right; margin-left:10px;}
+    .aligncenter{@include aligncenter();}
+    .alignleft{@include alignleft();}
+    .alignright{@include alignright();}
 
         /* captions */
-        .wp-caption{border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px auto 10px auto;}
+        .wp-caption{
+			border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px auto 10px auto;
+
+			&.alignleft{@include alignleft();}
+			&.alignright{@include alignright();}
+
+		} // .wp-caption
+
         .wp-caption-text{}
         .gallery-caption{}
 

@@ -101,3 +101,7 @@ $secondary-font:Times;
     &:after{content:''; display:block; clear:both;}
 }
 .required, .error {color:red;}
+
+@mixin alignleft{float:left; margin-right:10px;}
+@mixin alignright{float:right; margin-right:10px;}
+@mixin aligncenter{}
