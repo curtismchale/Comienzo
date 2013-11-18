@@ -1,0 +1,103 @@
+/**
+    Holds all the vars that we will use with LESS.css
+**/
+
+/* === FONTS === */
+$main-font:Arial;
+$secondary-font:Times;
+
+/* === COLORS === */
+
+/* === BASIC TEXT STYLES === */
+@mixin paragraph{margin:0 0 10px 0;}
+
+@mixin list-styles{margin:10px 0 10px 20px;}
+@mixin list-item-styles{margin:8px 0; list-style-type:disc; list-style-position:inside;}
+@mixin number-list-styles{@include list-styles(); list-style-type:decimal;}
+@mixin dd-styles{}
+@mixin dt-styles{}
+
+@mixin blockquote-styles{margin:15px 30px; padding:20px;}
+
+/* === HEADINGS === */
+@mixin heading-one{font-weight:bold; font-size:1.8em; margin:0 0 25px 0;}
+@mixin heading-two{font-weight:bold; font-size:1.6em; margin:0 0 20px 0;}
+@mixin heading-three{font-weight:bold; font-size:1.4em; margin:0 0 15px 0;}
+@mixin heading-four{font-size:1.2em; margin:0 0 10px 0;}
+@mixin heading-five{margin:0 0 8px 0;}
+@mixin heading-six{margin:0 0 8px 0;}
+
+/* === BORDERS === */
+@mixin top-right-round( $radius: 2px){
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-radius-topright: $radius;
+    border-top-right-radius: $radius;
+} // .top-right-round
+
+@mixin top-left-round( $radius: 2px){
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-radius-topleft: $radius;
+    border-top-left-radius: $radius;
+} // .top-left-round
+
+@mixin bottom-right-round( $radius: 2px){
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-radius-bottomright: $radius;
+    border-bottom-right-radius: $radius;
+} // .bottom-right-round
+
+@mixin bottom-left-round( $radius: 2px){
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-radius-bottomleft: $radius;
+    border-bottom-left-radius: $radius;
+} // .bottom-left-round
+
+@mixin round-corners( $radius: 2px ){
+    @include top-right-round( $radius );
+    @include top-left-round( $radius );
+    @include bottom-right-round( $radius );
+    @include bottom-left-round( $radius );
+} // .round-corners
+
+/* === ARROWS === */
+@mixin right-arrow( $width: 15px, $color: white ){
+    width:0px; height:0px;
+    border-bottom:$width solid transparent;  /* left arrow slant */
+    border-top:$width solid transparent; /* right arrow slant */
+    border-left:$width solid $color; /* bottom, add background color here */
+    font-size:0px; line-height:0px;
+} // .right-arrow
+
+@mixin left-arrow( $width: 15px, $color: white ){
+    width:0px; height:0px;
+    border-bottom:$width solid transparent;  /* left arrow slant */
+    border-top:$width solid transparent; /* right arrow slant */
+    border-right:$width solid $color; /* bottom, add background color here */
+    font-size:0px; line-height:0px;
+} // .left-arrow
+
+@mixin down-arrow( $width: 15px, $color: white ){
+    width:0px; height:0px;
+    border-left:$width solid transparent;
+    border-right:$width solid transparent;
+    border-top:$width solid $color;
+    font-size:0px; line-height:0px;
+} // .down-arrow
+
+@mixin up-arrow( $width: 15px, $color: white ){
+    width:0px; height:0px;
+    border-left:$width solid transparent;  /* left arrow slant */
+    border-right:$width solid transparent; /* right arrow slant */
+    border-bottom:$width solid $color; /* bottom, add background color here */
+    font-size:0px; line-height:0px;
+} // .up-arrow
+
+/* === GRADIENTS === */
+
+/* === BUTTONS === */
+
+/* === MISC === */
+@mixin clear{clear:both; display:block;
+    &:after{content:''; display:block; clear:both;}
+}
+.required, .error {color:red;}

@@ -2,7 +2,6 @@
 /* ----------------------------------------- */
 
 /* stock presentation items */
-.clear{clear:both;}
 .required, .error {color:red;}
 input[type=submit]{cursor:pointer;}
 
@@ -15,15 +14,15 @@ input[type=submit]{cursor:pointer;}
         a:focus{text-decoration:underline;}
 
     /*** HEADINGS ***/
-    h1{.heading-one;}
-    h2{.heading-two;}
-    h3{.heading-three;}
-    h4{.heading-four;}
-    h5{.heading-five;}
-    h6{.heading-six;}
+    h1{@include heading-one;}
+    h2{@include heading-two;}
+    h3{@include heading-three;}
+    h4{@include heading-four;}
+    h5{@include heading-five;}
+    h6{@include heading-six;}
 
     /*** TYPOGRAPHY ***/
-    body{font-family:@main-font; font-size:16px;}
+    body{font-family:$main-font; font-size:16px;}
 
 /* === HEADER === */
 
@@ -35,17 +34,17 @@ input[type=submit]{cursor:pointer;}
     article{
         font-size:16px; line-height:1.5em;
 
-        p{.paragraph;}
+        p{@include paragraph;}
 
-        ol{.list-styles;
-            li{.number-list-styles;}
+        ol{@include list-styles;
+            li{@include number-list-styles;}
         } // ol
 
-        ul{.list-styles;
-            li{.list-item-styles;}
+        ul{@include list-styles;
+            li{@include list-item-styles;}
         } // ul
 
-        blockquote{.blockquote-styles;}
+        blockquote{@include blockquote-styles;}
 
     } // article
 
@@ -73,7 +72,5 @@ input[type=submit]{cursor:pointer;}
     .comment-body li{margin:8px 0;}
 
     .comment-body blockquote{margin:15px 30px; padding:20px;}
-
-
 
 /* === FOOTER === */
