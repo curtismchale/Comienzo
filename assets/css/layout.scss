@@ -8,10 +8,11 @@ input[type=submit]{cursor:pointer;}
 /* === SITE WIDE === */
 
     /*** LINKS ***/
-    a{text-decoration:none; padding:2px;}
-        a:hover,
-        a:active,
-        a:focus{text-decoration:underline;}
+    a{text-decoration:none; padding:2px;
+        &:hover,
+        &:active,
+        &:focus{text-decoration:underline;}
+	}
 
     /*** HEADINGS ***/
     h1{@include heading-one;}
@@ -65,12 +66,21 @@ input[type=submit]{cursor:pointer;}
 .bypostauthor{}
 
     /*** USER COMMENTS ***/
-    .comment-body{font-size:16px; line-height:1.5em;}
-    .comment-body p{margin:0 0 10px 0;}
+    .comment-body{
+		font-size:16px; line-height:1.5em;
 
-    .comment-body ul, .comment-body ol{margin:10px 0 10px 30px;}
-    .comment-body li{margin:8px 0;}
+        p{@include paragraph;}
 
-    .comment-body blockquote{margin:15px 30px; padding:20px;}
+        ol{@include list-styles;
+            li{@include number-list-styles;}
+        } // ol
+
+        ul{@include list-styles;
+            li{@include list-item-styles;}
+        } // ul
+
+        blockquote{@include blockquote-styles;}
+
+	} // .comment-body
 
 /* === FOOTER === */
