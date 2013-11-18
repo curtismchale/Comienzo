@@ -12,15 +12,15 @@ input[type=submit]{cursor:pointer;}
         &:hover,
         &:active,
         &:focus{text-decoration:underline;}
-	}
+	} // a
 
     /*** HEADINGS ***/
-    h1{@include heading-one;}
-    h2{@include heading-two;}
-    h3{@include heading-three;}
-    h4{@include heading-four;}
-    h5{@include heading-five;}
-    h6{@include heading-six;}
+    h1{@include heading-one();}
+    h2{@include heading-two();}
+    h3{@include heading-three();}
+    h4{@include heading-four();}
+    h5{@include heading-five();}
+    h6{@include heading-six();}
 
     /*** TYPOGRAPHY ***/
     body{font-family:$main-font; font-size:16px;}
