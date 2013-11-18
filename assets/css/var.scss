@@ -104,4 +104,4 @@ $secondary-font:Times;
 
 @mixin alignleft{float:left; margin-right:10px;}
 @mixin alignright{float:right; margin-right:10px;}
-@mixin aligncenter{}
+@mixin aligncenter{display:block;}
