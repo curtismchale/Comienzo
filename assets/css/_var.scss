@@ -65,9 +65,6 @@ $secondary-font:Times;
 /* === BUTTONS === */
 
 /* === MISC === */
-@mixin clear{clear:both; display:block;
-    &:after{content:''; display:block; clear:both;}
-}
 .required, .error {color:red;}
 
 @mixin alignleft{float:left; margin-right:10px;}
