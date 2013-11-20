@@ -27,38 +27,6 @@ $secondary-font:Times;
 @mixin heading-five{margin:0 0 8px 0;}
 @mixin heading-six{margin:0 0 8px 0;}
 
-/* === BORDERS === */
-@mixin top-right-round( $radius: 2px){
-    -webkit-border-top-right-radius: $radius;
-    -moz-border-radius-topright: $radius;
-    border-top-right-radius: $radius;
-} // .top-right-round
-
-@mixin top-left-round( $radius: 2px){
-    -webkit-border-top-left-radius: $radius;
-    -moz-border-radius-topleft: $radius;
-    border-top-left-radius: $radius;
-} // .top-left-round
-
-@mixin bottom-right-round( $radius: 2px){
-    -webkit-border-bottom-right-radius: $radius;
-    -moz-border-radius-bottomright: $radius;
-    border-bottom-right-radius: $radius;
-} // .bottom-right-round
-
-@mixin bottom-left-round( $radius: 2px){
-    -webkit-border-bottom-left-radius: $radius;
-    -moz-border-radius-bottomleft: $radius;
-    border-bottom-left-radius: $radius;
-} // .bottom-left-round
-
-@mixin round-corners( $radius: 2px ){
-    @include top-right-round( $radius );
-    @include top-left-round( $radius );
-    @include bottom-right-round( $radius );
-    @include bottom-left-round( $radius );
-} // .round-corners
-
 /* === ARROWS === */
 @mixin right-arrow( $width: 15px, $color: white ){
     width:0px; height:0px;
