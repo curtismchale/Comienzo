@@ -27,39 +27,6 @@ $secondary-font:Times;
 @mixin heading-five{margin:0 0 8px 0;}
 @mixin heading-six{margin:0 0 8px 0;}
 
-/* === ARROWS === */
-@mixin right-arrow( $width: 15px, $color: white ){
-    width:0px; height:0px;
-    border-bottom:$width solid transparent;  /* left arrow slant */
-    border-top:$width solid transparent; /* right arrow slant */
-    border-left:$width solid $color; /* bottom, add background color here */
-    font-size:0px; line-height:0px;
-} // .right-arrow
-
-@mixin left-arrow( $width: 15px, $color: white ){
-    width:0px; height:0px;
-    border-bottom:$width solid transparent;  /* left arrow slant */
-    border-top:$width solid transparent; /* right arrow slant */
-    border-right:$width solid $color; /* bottom, add background color here */
-    font-size:0px; line-height:0px;
-} // .left-arrow
-
-@mixin down-arrow( $width: 15px, $color: white ){
-    width:0px; height:0px;
-    border-left:$width solid transparent;
-    border-right:$width solid transparent;
-    border-top:$width solid $color;
-    font-size:0px; line-height:0px;
-} // .down-arrow
-
-@mixin up-arrow( $width: 15px, $color: white ){
-    width:0px; height:0px;
-    border-left:$width solid transparent;  /* left arrow slant */
-    border-right:$width solid transparent; /* right arrow slant */
-    border-bottom:$width solid $color; /* bottom, add background color here */
-    font-size:0px; line-height:0px;
-} // .up-arrow
-
 /* === GRADIENTS === */
 
 /* === BUTTONS === */
