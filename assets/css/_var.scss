@@ -13,9 +13,25 @@ $secondary-font:Times;
 
 @mixin list-styles{margin:10px 0 10px 20px;}
 @mixin list-item-styles{margin:8px 0; list-style-type:disc; list-style-position:inside;}
-@mixin number-list-styles{@include list-styles(); list-style-type:decimal;}
-@mixin dd-styles{}
-@mixin dt-styles{}
+@mixin number-list-styles{@include list-item-styles(); list-style-type:decimal;}
+@mixin dl-styles{@include list-styles;}
+@mixin dd-styles{margin-bottom:20px; padding:0 10px 0 20px;}
+@mixin dt-styles{font-weight:700;}
+
+@mixin tables{
+	width:100%;
+	margin:30px 0;
+
+	th, td{
+		padding:5px;
+		border:1px solid #333;
+	} // th, td
+
+	th{
+		text-align:center;
+	}// th
+
+} // tables
 
 @mixin blockquote-styles{margin:15px 30px; padding:20px;}
 

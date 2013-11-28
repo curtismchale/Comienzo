@@ -45,6 +45,13 @@ input[type=submit]{cursor:pointer;}
             li{@include list-item-styles;}
         } // ul
 
+		dl{@include dl-styles;
+			dt{@include dt-styles;}
+			dd{@include dd-styles;}
+		} // dd
+
+		table{@include tables;}
+
         blockquote{@include blockquote-styles;}
 
     } // article
@@ -85,6 +92,13 @@ input[type=submit]{cursor:pointer;}
         ul{@include list-styles;
             li{@include list-item-styles;}
         } // ul
+
+		dl{@include dl-styles;
+			dt{@include dt-styles;}
+			dd{@include dd-styles;}
+		} // dd
+
+		table{@include tables;}
 
         blockquote{@include blockquote-styles;}
 
