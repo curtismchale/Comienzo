@@ -17,7 +17,7 @@
 
     <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
     <p class="post-author">by <?php the_author_posts_link(); ?></p>
-    <time class="date-published"><?php the_time( get_option('date_format') ); ?></time>
+    <time class="date-published" itemprop="datePublished" pubdate><?php the_time( get_option('date_format') ); ?></time>
 
   </div><!-- /.post-heading -->
 
