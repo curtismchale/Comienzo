@@ -11,7 +11,7 @@
  * @since 2.0
  */
 ?>
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article itemprop="mainContentOfPage" <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
   <div class="post-heading">
 
