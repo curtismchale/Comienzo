@@ -12,7 +12,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php com_tag_schema(); ?> <?php language_attributes(); ?>>
 
     <head>
 

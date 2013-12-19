@@ -216,3 +216,34 @@ function com_archive_title(){ ?>
 	<?php }
 
 } // com_archive_title
+
+/**
+ * Adds schema.org stuff to the site header
+ *
+ * @since 2.2.2
+ * @author SFNdesign, Curtis McHale
+ *
+ * @uses is_single()          Returns true if single page/post
+ * @uses is_page()            Returns true if is a page. If given page id, page slug, or page title only returns true if on that page
+ * @uses is_author()          Returns true if on an author archive page
+ * @uses is_search()          Returns true if on the search page
+ */
+function com_tag_schema(){
+
+	$schema = 'http://schema.org/';
+
+	// Is single post
+	if( is_single() ){
+		$type = "Article";
+	} elseif ( is_page( 'contact' ) || is_page( 'contact-us' ) ){
+		$type = 'ContactPage';
+	} elseif ( is_author() ){
+		$type = 'ProfilePage';
+	} elseif ( is_search() ) {
+		$type = 'SearchResultsPage';
+	} else {
+		$type = 'WebPage';
+	}
+
+	echo 'itemscope="itemscope" itemtype="' . $schema . $type . '"';
+} // com_schema_tag
