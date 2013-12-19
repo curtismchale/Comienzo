@@ -16,7 +16,7 @@
 
     <head>
 
-        <title><?php wp_title(); ?></title>
+        <title itemprop="name"><?php wp_title(); ?></title>
 
         <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
         <meta name="description" content="<?php bloginfo('description') ?>" />
