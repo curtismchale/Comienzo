@@ -28,27 +28,7 @@ input[type=submit]{cursor:pointer;}
 
     /*** ARTICLE ***/
     article{
-        font-size:16px; line-height:1.5em;
-
-        p{@include paragraph;}
-
-        ol{@include list-styles;
-            li{@include number-list-styles;}
-        } // ol
-
-        ul{@include list-styles;
-            li{@include list-item-styles;}
-        } // ul
-
-		dl{@include dl-styles;
-			dt{@include dt-styles;}
-			dd{@include dd-styles;}
-		} // dd
-
-		table{@include tables;}
-
-        blockquote{@include blockquote-styles;}
-
+		@include content-styles;
     } // article
 
     /*** STICKY ***/
@@ -76,27 +56,7 @@ input[type=submit]{cursor:pointer;}
 
     /*** USER COMMENTS ***/
     .comment-body{
-		font-size:16px; line-height:1.5em;
-
-        p{@include paragraph;}
-
-        ol{@include list-styles;
-            li{@include number-list-styles;}
-        } // ol
-
-        ul{@include list-styles;
-            li{@include list-item-styles;}
-        } // ul
-
-		dl{@include dl-styles;
-			dt{@include dt-styles;}
-			dd{@include dd-styles;}
-		} // dd
-
-		table{@include tables;}
-
-        blockquote{@include blockquote-styles;}
-
+		@include content-styles;
 	} // .comment-body
 
 /* === FOOTER === */

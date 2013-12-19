@@ -54,6 +54,35 @@ $base-color:#444;
 
 @mixin blockquote-styles{margin:15px 30px; padding:20px;}
 
+/**
+ * Defines our basic content styles for the article and comment content
+ */
+@mixin content-styles{
+
+	@include base_fonts;
+
+	a{@include link-styles;}
+
+	p{@include paragraph;}
+
+	ol{@include list-styles;
+		li{@include number-list-styles;}
+	} // ol
+
+	ul{@include list-styles;
+		li{@include list-item-styles;}
+	} // ul
+
+	dl{@include dl-styles;
+		dt{@include dt-styles;}
+		dd{@include dd-styles;}
+	} // dd
+
+	table{@include tables;}
+
+	blockquote{@include blockquote-styles;}
+} // content-styles
+
 /* === HEADINGS === */
 @mixin heading-one{font-weight:bold; font-size:1.8em; margin:0 0 25px 0;}
 @mixin heading-two{font-weight:bold; font-size:1.6em; margin:0 0 20px 0;}
