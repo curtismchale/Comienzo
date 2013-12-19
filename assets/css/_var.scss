@@ -5,10 +5,29 @@
 /* === FONTS === */
 $main-font:Arial;
 $secondary-font:Times;
+$base-color:#444;
+
+@mixin base_fonts{
+	font-family:$main-font;
+    font-size:16px; line-height:1.5em;
+    color:$base-color;
+} // base_fonts
 
 /* === COLORS === */
 
 /* === BASIC TEXT STYLES === */
+@mixin link-styles{
+	text-decoration:none; padding:2px;
+	color:$base-color * 2;
+
+	&:hover,
+	&:active,
+	&:focus{
+		text-decoration:underline;
+		cursor:pointer;
+	}
+} // link-styles
+
 @mixin paragraph{margin:0 0 10px 0;}
 
 @mixin list-styles{margin:10px 0 10px 20px;}

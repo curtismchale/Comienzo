@@ -9,7 +9,8 @@ module.exports = function(grunt) {
 			style: 'compressed'
 		  },
 		  files: {
-			'style.css': 'style.scss'
+			'style.css': 'style.scss',
+			'editor-style.css' : 'editor-style.scss'
 		  }
 		}
 	},

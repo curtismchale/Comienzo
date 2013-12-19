@@ -7,13 +7,6 @@ input[type=submit]{cursor:pointer;}
 
 /* === SITE WIDE === */
 
-    /*** LINKS ***/
-    a{text-decoration:none; padding:2px;
-        &:hover,
-        &:active,
-        &:focus{text-decoration:underline;}
-	} // a
-
     /*** HEADINGS ***/
     h1{@include heading-one();}
     h2{@include heading-two();}
@@ -23,7 +16,7 @@ input[type=submit]{cursor:pointer;}
     h6{@include heading-six();}
 
     /*** TYPOGRAPHY ***/
-    body{font-family:$main-font; font-size:16px;}
+    body{@include base-fonts;}
 
 /* === HEADER === */
 

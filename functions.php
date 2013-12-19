@@ -22,6 +22,9 @@ add_theme_support('automatic-feed-links');
 class Comienzo{
 
 	function __construct(){
+
+		add_action( 'init', array( $this, 'add_custom_editor_styles' ) );
+
 		add_filter( 'body_class', array( $this, 'body_classes' ) );
 
 		add_action( 'widgets_init', array( $this, 'widget_areas' ) );
@@ -34,6 +37,19 @@ class Comienzo{
 		add_filter( 'get_the_excerpt', array( $this, 'improved_trim_excerpt' ) );
 
 	} // construct
+
+	/**
+	 * Adds custom editor styles to the site
+	 *
+	 * @since 2.2.2
+	 * @author SFNdesign, Curtis McHale
+	 * @access public
+	 *
+	 * @uses add_editor_style()           Sets up custom editor styles for the WordPress editor on posts/pages
+	 */
+	public function add_custom_editor_styles(){
+		add_editor_style();
+	} // add_custom_editor_styles
 
 	/**
 	 * Enqueues our theme scripts

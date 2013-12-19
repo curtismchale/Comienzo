@@ -1,0 +1,39 @@
+@import 'var';
+
+body#tinymce.wp-editor{
+
+	@include base_fonts;
+
+    .post-title{padding-bottom:10px;}
+
+    .wp-caption{
+        max-width:730px; height:auto;
+    }
+
+    img{max-width:720px; height:auto;}
+
+    a{@include link-styles;}
+
+    p{@include paragraph;}
+
+    ol{@include list-styles;
+        li{@include number-list-styles;}
+    } // ol
+
+    ul{@include list-styles;
+        li{@include list-item-styles;}
+    } // ul
+
+    blockquote{@include blockquote-styles;}
+
+    table{
+        &.mceItemTable{
+            @include tables;
+        } // &.mceItemTable
+    } // table
+
+    dl{@include dl-styles;}
+	dd{@include dd-styles;}
+	dt{@include dt-styles;}
+
+} // body#tinymce.wp-editor
