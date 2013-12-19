@@ -18,6 +18,8 @@ input[type=submit]{cursor:pointer;}
     /*** TYPOGRAPHY ***/
     body{@include base-fonts;}
 
+	#main-wrapper{@include outer-container;}
+
 /* === HEADER === */
 
 /* === MENU === */
