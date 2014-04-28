@@ -33,6 +33,7 @@
 					wptt_log_error(
 						'404 Page',
 						'Someone hit the 404 page',
+						'',
 						array( 'user' => $current_user )
 					);
 
