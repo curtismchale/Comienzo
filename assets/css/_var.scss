@@ -101,10 +101,3 @@ $base-color:#444;
 @mixin alignleft{float:left; margin-right:10px;}
 @mixin alignright{float:right; margin-right:10px;}
 @mixin aligncenter{display:block;}
-
-@mixin all-round( $radii ){
-	@include border-top-radius( $radii );
-	@include border-bottom-radius( $radii );
-	@include border-left-radius( $radii );
-	@include border-right-radius( $radii );
-} // all-round
