@@ -23,6 +23,8 @@ class Comienzo{
 
 	function __construct(){
 
+		add_action( 'load-page-new.php', array( $this, 'change_comment_status' ) );
+
 		add_action( 'init', array( $this, 'add_custom_editor_styles' ) );
 
 		add_filter( 'body_class', array( $this, 'body_classes' ) );
@@ -37,6 +39,18 @@ class Comienzo{
 		add_filter( 'get_the_excerpt', array( $this, 'improved_trim_excerpt' ) );
 
 	} // construct
+
+	/**
+	 * Sets default comment and ping status
+	 * to off for "Page" post types
+	 *
+	 */
+	public function change_comment_status() {
+
+		add_filter( 'option_default_comment_status', '__return_false' );
+		add_filter( 'option_default_ping_status', '__return_false' );
+
+	} // change_comment_status
 
 	/**
 	 * Adds custom editor styles to the site
