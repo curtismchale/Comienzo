@@ -15,30 +15,30 @@
 
 <div id="index">
 
-  <div id="content-wrapper">
+	<div id="content-wrapper">
 
-    <?php if (have_posts()) : ?>
+		<?php if (have_posts()) : ?>
 
-      <?php while (have_posts()) : the_post(); ?>
+		<?php while (have_posts()) : the_post(); ?>
 
-        <?php get_template_part( 'loop', get_post_type() ); ?>
+			<?php get_template_part( 'loop', get_post_type() ); ?>
 
-      <?php endwhile; ?>
+		<?php endwhile; ?>
 
-        <!-- includes next previous links or post level nav -->
-        <?php locate_template( array( 'assets/includes/post-navigation.php' ), true ); ?>
+			<!-- includes next previous links or post level nav -->
+			<?php locate_template( array( 'assets/includes/post-navigation.php' ), true ); ?>
 
-      <?php else : ?>
+		<?php else : ?>
 
-        <h2>Not Found</h2>
-        <p>Sorry, but you are looking for something that isn't here.</p>
-        <?php get_search_form(); ?>
+			<h2>Not Found</h2>
+			<p>Sorry, but you are looking for something that isn't here.</p>
+			<?php get_search_form(); ?>
 
-      <?php endif; ?>
+		<?php endif; ?>
 
-  </div><!-- /#content-wrapper -->
+	</div><!-- /#content-wrapper -->
 
-  <?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 
 </div><!-- /#index -->
 

@@ -15,25 +15,25 @@
 
 <div id="single">
 
-  <div id="content-wrapper">
+	<div id="content-wrapper">
 
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-      <?php get_template_part( 'loop', 'blog' ); ?>
+			<?php get_template_part( 'loop', 'blog' ); ?>
 
-      <!-- includes next previous links or post level nav -->
-      <?php locate_template( array( 'assets/includes/post-navigation.php' ), true ); ?>
+			<!-- includes next previous links or post level nav -->
+			<?php locate_template( array( 'assets/includes/post-navigation.php' ), true ); ?>
 
-    <?php endwhile; else: ?>
+		<?php endwhile; else: ?>
 
-      <p>Sorry, no posts matched your criteria.</p>
-      <?php get_search_form(); ?>
+			<p>Sorry, no posts matched your criteria.</p>
+			<?php get_search_form(); ?>
 
-    <?php endif; ?>
+		<?php endif; ?>
 
-  </div><!-- /#content-wrapper -->
+	</div><!-- /#content-wrapper -->
 
-  <?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 
 </div><!-- /#single -->
 

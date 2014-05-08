@@ -13,25 +13,25 @@
 ?>
 <article itemprop="mainContentOfPage" <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-  <div class="post-heading">
+	<div class="post-heading">
 
-    <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-    <p class="post-author">by <?php the_author_posts_link(); ?></p>
-    <time class="date-published" itemprop="datePublished" pubdate><?php the_time( get_option('date_format') ); ?></time>
+		<h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		<p class="post-author">by <?php the_author_posts_link(); ?></p>
+		<time class="date-published" itemprop="datePublished" pubdate><?php the_time( get_option('date_format') ); ?></time>
 
-  </div><!-- /.post-heading -->
+	</div><!-- /.post-heading -->
 
-  <?php
+	<?php
 
-  	if( is_search() || is_archive() ){
-  		the_excerpt();
-  	} else{
-    	the_content('Read the rest of this entry &raquo;');
-    }
+		if( is_search() || is_archive() ){
+			the_excerpt();
+		} else{
+			the_content('Read the rest of this entry &raquo;');
+		}
 
 	?>
 
-  <p class="post-taxonomy"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', '); ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
+	<p class="post-taxonomy"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', '); ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
 
 </article><!-- /post_class(); -->
 

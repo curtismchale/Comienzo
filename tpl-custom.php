@@ -20,15 +20,15 @@ Template Name: Custom
 
 <div id="page-custom">
 
-  <div id="content-wrapper">
+	<div id="content-wrapper">
 
-    <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-    <!-- custom page loop goes here -->
-    </article><!-- /post_class(); -->
+		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+			<!-- custom page loop goes here -->
+		</article><!-- /post_class(); -->
 
-  </div><!-- /#content-wrapper -->
+	</div><!-- /#content-wrapper -->
 
-  <?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 
 </div><!-- /#page-custom -->
 

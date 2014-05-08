@@ -12,5 +12,5 @@
  */
 ?>
 <ul id="sidebar" class="widget-area">
-  <?php dynamic_sidebar('sidebar'); ?>
+	<?php dynamic_sidebar('sidebar'); ?>
 </ul>
